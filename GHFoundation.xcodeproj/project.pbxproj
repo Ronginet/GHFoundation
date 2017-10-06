@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E49B004A1F87B5B70080035A /* Foundation+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		E49BFFEB1F877BC20080035A /* GHFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49BFFEE1F877BC20080035A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E49BFFEF1F877BC20080035A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		E49B00491F87B45C0080035A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E49B004A1F87B5B70080035A /* Foundation+Log.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
