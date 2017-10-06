@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E49B004D1F87B67A0080035A /* UIView+Frame.m */; };
 		E49BFFF01F877BC20080035A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFEF1F877BC20080035A /* AppDelegate.m */; };
 		E49BFFF31F877BC20080035A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFF21F877BC20080035A /* ViewController.m */; };
 		E49BFFF61F877BC20080035A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49BFFF41F877BC20080035A /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		E49B004A1F87B5B70080035A /* Foundation+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		E49B004C1F87B67A0080035A /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		E49B004D1F87B67A0080035A /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		E49BFFEB1F877BC20080035A /* GHFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49BFFEE1F877BC20080035A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E49BFFEF1F877BC20080035A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,9 +54,19 @@
 		E49B00491F87B45C0080035A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E49B004B1F87B61A0080035A /* UIView */,
 				E49B004A1F87B5B70080035A /* Foundation+Log.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		E49B004B1F87B61A0080035A /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				E49B004C1F87B67A0080035A /* UIView+Frame.h */,
+				E49B004D1F87B67A0080035A /* UIView+Frame.m */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		E49BFFE21F877BC20080035A = {
@@ -160,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */,
 				E49BFFF31F877BC20080035A /* ViewController.m in Sources */,
 				E49BFFFE1F877BC20080035A /* main.m in Sources */,
 				E49BFFF01F877BC20080035A /* AppDelegate.m in Sources */,
