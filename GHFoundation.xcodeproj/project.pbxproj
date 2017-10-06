@@ -39,6 +39,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E49B00481F87B45C0080035A /* GHFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				E49B00491F87B45C0080035A /* Category */,
+			);
+			path = GHFoundation;
+			sourceTree = "<group>";
+		};
+		E49B00491F87B45C0080035A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		E49BFFE21F877BC20080035A = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +73,7 @@
 		E49BFFED1F877BC20080035A /* GHFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				E49B00481F87B45C0080035A /* GHFoundation */,
 				E49BFFEE1F877BC20080035A /* AppDelegate.h */,
 				E49BFFEF1F877BC20080035A /* AppDelegate.m */,
 				E49BFFF11F877BC20080035A /* ViewController.h */,
