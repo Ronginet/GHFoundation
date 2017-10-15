@@ -10,4 +10,14 @@
 
 @implementation NSDictionary (Extension)
 
++ (NSDictionary *)parseJSONStringToDictionary:(NSString *)JSONString {
+    NSData *jsonData = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
+    return jsonDict;
+}
+
+- (NSDictionary *)parseJSONStringToDictionary:(NSString *)JSONString {
+    return [NSDictionary parseJSONStringToDictionary:JSONString];
+}
+
 @end
