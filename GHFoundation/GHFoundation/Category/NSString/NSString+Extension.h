@@ -10,6 +10,9 @@
 
 @interface NSString (Extension)
 
+// 通用正则合法性判断
+- (BOOL)isValidateWithRegex:(NSString *)regex;
+
 // 判断是否为移动电话
 - (BOOL)isMobileNumber;
 
