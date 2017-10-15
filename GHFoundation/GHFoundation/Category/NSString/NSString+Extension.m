@@ -30,4 +30,14 @@
     return [predicate evaluateWithObject:self];
 }
 
+- (BOOL)isIdentityCard {
+    if (self.length <= 0) {
+        return NO;
+    }
+    
+    NSString *regex = @"^(\\d{14}|\\d{17})(\\d|[xX])$";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [predicate evaluateWithObject:self];
+}
+
 @end

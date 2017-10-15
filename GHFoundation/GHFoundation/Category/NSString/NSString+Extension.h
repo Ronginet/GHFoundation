@@ -19,4 +19,7 @@
 // 判断是否为邮箱
 - (BOOL)isEmail;
 
+// 身份证号码验证
+- (BOOL)isIdentityCard;
+
 @end
