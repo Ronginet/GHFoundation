@@ -14,6 +14,7 @@
 		E49BFFF81F877BC20080035A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49BFFF71F877BC20080035A /* Assets.xcassets */; };
 		E49BFFFB1F877BC20080035A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49BFFF91F877BC20080035A /* LaunchScreen.storyboard */; };
 		E49BFFFE1F877BC20080035A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFFD1F877BC20080035A /* main.m */; };
+		E4F68EFF1F92481F00CD49D0 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F68EFE1F92481F00CD49D0 /* NSString+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		E49BFFFA1F877BC20080035A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E49BFFFC1F877BC20080035A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49BFFFD1F877BC20080035A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4F68EFD1F92481F00CD49D0 /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		E4F68EFE1F92481F00CD49D0 /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 		E4F68EFC1F9247E200CD49D0 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				E4F68EFD1F92481F00CD49D0 /* NSString+Extension.h */,
+				E4F68EFE1F92481F00CD49D0 /* NSString+Extension.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F68EFF1F92481F00CD49D0 /* NSString+Extension.m in Sources */,
 				E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */,
 				E49BFFF31F877BC20080035A /* ViewController.m in Sources */,
 				E49BFFFE1F877BC20080035A /* main.m in Sources */,
