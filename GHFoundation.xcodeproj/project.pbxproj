@@ -46,6 +46,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E456EC091F93BCC800414F27 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
 		E49B00481F87B45C0080035A /* GHFoundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +64,7 @@
 		E49B00491F87B45C0080035A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E456EC091F93BCC800414F27 /* NSDictionary */,
 				E4F68EFC1F9247E200CD49D0 /* NSString */,
 				E49B004B1F87B61A0080035A /* UIView */,
 				E49B004A1F87B5B70080035A /* Foundation+Log.m */,
