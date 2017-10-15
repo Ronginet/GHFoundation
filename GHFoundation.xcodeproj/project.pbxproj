@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */; };
 		E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E49B004D1F87B67A0080035A /* UIView+Frame.m */; };
 		E49BFFF01F877BC20080035A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFEF1F877BC20080035A /* AppDelegate.m */; };
 		E49BFFF31F877BC20080035A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFF21F877BC20080035A /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
+		E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
 		E49B004A1F87B5B70080035A /* Foundation+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		E49B004C1F87B67A0080035A /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		E49B004D1F87B67A0080035A /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -49,6 +52,8 @@
 		E456EC091F93BCC800414F27 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */,
+				E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			files = (
 				E4F68EFF1F92481F00CD49D0 /* NSString+Extension.m in Sources */,
 				E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */,
+				E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */,
 				E49BFFF31F877BC20080035A /* ViewController.m in Sources */,
 				E49BFFFE1F877BC20080035A /* main.m in Sources */,
 				E49BFFF01F877BC20080035A /* AppDelegate.m in Sources */,
