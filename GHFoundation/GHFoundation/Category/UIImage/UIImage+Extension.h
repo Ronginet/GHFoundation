@@ -10,6 +10,7 @@
 
 @interface UIImage (Extension)
 
-+ (UIImage *)imageWithColor:(UIColor *)color;
+/// 颜色转图片
++ (UIImage *)gh_imageWithColor:(UIColor *)color;
 
 @end
