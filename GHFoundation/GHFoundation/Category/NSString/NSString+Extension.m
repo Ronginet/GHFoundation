@@ -40,4 +40,15 @@
     return [predicate evaluateWithObject:self];
 }
 
+- (BOOL)isBlank {
+    if (!self || [self isEqualToString:@""]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)isNotBlank {
+    return ![self isBlank];
+}
+
 @end

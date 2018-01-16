@@ -22,4 +22,8 @@
 // 身份证号码验证
 - (BOOL)isIdentityCard;
 
+- (BOOL)isBlank;
+
+- (BOOL)isNotBlank;
+
 @end
