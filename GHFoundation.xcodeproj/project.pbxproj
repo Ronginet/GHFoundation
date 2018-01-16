@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */; };
+		E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E478BDB9200E446000C2358E /* NSDate+Extension.m */; };
 		E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E49B004D1F87B67A0080035A /* UIView+Frame.m */; };
 		E49BFFF01F877BC20080035A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFEF1F877BC20080035A /* AppDelegate.m */; };
 		E49BFFF31F877BC20080035A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFF21F877BC20080035A /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
 		E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
+		E478BDB8200E446000C2358E /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		E478BDB9200E446000C2358E /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		E49B004A1F87B5B70080035A /* Foundation+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		E49B004C1F87B67A0080035A /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		E49B004D1F87B67A0080035A /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -64,6 +67,15 @@
 			path = NSDictionary;
 			sourceTree = "<group>";
 		};
+		E478BDB7200E444900C2358E /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				E478BDB8200E446000C2358E /* NSDate+Extension.h */,
+				E478BDB9200E446000C2358E /* NSDate+Extension.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
 		E49B00481F87B45C0080035A /* GHFoundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +87,7 @@
 		E49B00491F87B45C0080035A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E478BDB7200E444900C2358E /* NSDate */,
 				E4EF8A201FB89C1200D8BEB0 /* UIImage */,
 				E456EC091F93BCC800414F27 /* NSDictionary */,
 				E4F68EFC1F9247E200CD49D0 /* NSString */,
@@ -225,6 +238,7 @@
 				E49BFFFE1F877BC20080035A /* main.m in Sources */,
 				E4EF8A261FB89EDC00D8BEB0 /* UIView+Extension.m in Sources */,
 				E49BFFF01F877BC20080035A /* AppDelegate.m in Sources */,
+				E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
