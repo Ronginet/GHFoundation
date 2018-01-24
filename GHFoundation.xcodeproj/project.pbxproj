@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */; };
+		E42120CC2018DF1600CE9BA2 /* NSData+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = E42120CB2018DF1600CE9BA2 /* NSData+Image.m */; };
 		E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */; };
 		E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E478BDB9200E446000C2358E /* NSDate+Extension.m */; };
 		E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E49B004D1F87B67A0080035A /* UIView+Frame.m */; };
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		E42120C62018DE0500CE9BA2 /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
 		E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
+		E42120CA2018DF1600CE9BA2 /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Image.h"; sourceTree = "<group>"; };
+		E42120CB2018DF1600CE9BA2 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
 		E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
 		E478BDB8200E446000C2358E /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
@@ -70,6 +73,15 @@
 			path = UIDevice;
 			sourceTree = "<group>";
 		};
+		E42120C92018DEDB00CE9BA2 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				E42120CA2018DF1600CE9BA2 /* NSData+Image.h */,
+				E42120CB2018DF1600CE9BA2 /* NSData+Image.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
 		E456EC091F93BCC800414F27 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +111,7 @@
 		E49B00491F87B45C0080035A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E42120C92018DEDB00CE9BA2 /* NSData */,
 				E42120C52018DDF100CE9BA2 /* UIDevice */,
 				E478BDB7200E444900C2358E /* NSDate */,
 				E4EF8A201FB89C1200D8BEB0 /* UIImage */,
@@ -252,6 +265,7 @@
 				E49BFFFE1F877BC20080035A /* main.m in Sources */,
 				E4EF8A261FB89EDC00D8BEB0 /* UIView+Extension.m in Sources */,
 				E49BFFF01F877BC20080035A /* AppDelegate.m in Sources */,
+				E42120CC2018DF1600CE9BA2 /* NSData+Image.m in Sources */,
 				E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
