@@ -51,4 +51,25 @@
     return ![self isBlank];
 }
 
+- (NSArray<NSValue *>*)rangesOfText:(NSString *)text options:(NSStringCompareOptions)mask {
+    if (!text && text.length == 0) {
+        return @[];
+    }
+    
+    NSMutableArray *arrM = [NSMutableArray array];
+    NSRange searchRange = NSMakeRange(0, self.length);
+    while (searchRange.location + searchRange.length <= self.length) {
+        NSRange range = [self rangeOfString:text options:mask range:searchRange];
+        if (range.location == NSNotFound) {
+            break;
+        }
+        
+        NSUInteger location = range.location + range.length;
+        searchRange = NSMakeRange(location, self.length - location);
+        [arrM addObject:[NSValue valueWithRange:range]];
+    }
+    
+    return arrM.copy;
+}
+
 @end
