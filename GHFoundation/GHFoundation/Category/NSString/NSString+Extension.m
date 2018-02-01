@@ -40,15 +40,15 @@
     return [predicate evaluateWithObject:self];
 }
 
-- (BOOL)isBlank {
+- (BOOL)isEmpty {
     if (!self || [self isEqualToString:@""]) {
         return YES;
     }
     return NO;
 }
 
-- (BOOL)isNotBlank {
-    return ![self isBlank];
+- (BOOL)isNotEmpty {
+    return ![self isEmpty];
 }
 
 - (NSArray<NSValue *>*)rangesOfText:(NSString *)text options:(NSStringCompareOptions)mask {
