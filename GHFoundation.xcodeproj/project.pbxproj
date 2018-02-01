@@ -35,6 +35,7 @@
 		E478BDB9200E446000C2358E /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		E47A709120220E5100E1EB5D /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		E47A709220220E5100E1EB5D /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		E47A709420220EFB00E1EB5D /* GHFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHFoundation.h; sourceTree = "<group>"; };
 		E49B004A1F87B5B70080035A /* Foundation+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		E49B004C1F87B67A0080035A /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		E49B004D1F87B67A0080035A /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		E49B00481F87B45C0080035A /* GHFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				E47A709420220EFB00E1EB5D /* GHFoundation.h */,
 				E49B00491F87B45C0080035A /* Category */,
 			);
 			path = GHFoundation;
