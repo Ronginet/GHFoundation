@@ -1,14 +1,14 @@
 //
-//  NSData+Image.m
+//  NSData+ImageFormat.m
 //  GHFoundation
 //
 //  Created by Rong on 2018/1/24.
 //  Copyright © 2018年 Rong. All rights reserved.
 //
 
-#import "NSData+Image.h"
+#import "NSData+ImageFormat.h"
 
-@implementation NSData (Image)
+@implementation NSData (ImageFormat)
 
 - (GHImageFormat)gh_imageFormat {
     uint8_t c;
@@ -23,7 +23,6 @@
         default:
             return GHImageFormatUndefined;
     }
-    return GHImageFormatUndefined;
 }
 
 @end

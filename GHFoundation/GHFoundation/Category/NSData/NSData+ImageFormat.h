@@ -1,5 +1,5 @@
 //
-//  NSData+Image.h
+//  NSData+ImageFormat.h
 //  GHFoundation
 //
 //  Created by Rong on 2018/1/24.
@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, GHImageFormat) {
     GHImageFormatGIF = 2,
 };
 
-@interface NSData (Image)
+@interface NSData (ImageFormat)
 
 /// 获取图片类型
 - (GHImageFormat)gh_imageFormat;
