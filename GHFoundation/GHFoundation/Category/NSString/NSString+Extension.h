@@ -23,10 +23,10 @@
 - (BOOL)isIdentityCard;
 
 /// 字符串是否为空
-- (BOOL)isEmpty;
++ (BOOL)isEmpty:(NSString *)string;
 
 /// 字符串是否不为空
-- (BOOL)isNotEmpty;
++ (BOOL)isNotEmpty:(NSString *)string;
 
 /// 获取子字符串在父字符串中出现的range
 - (NSArray<NSValue *>*)rangesOfText:(NSString *)text options:(NSStringCompareOptions)mask;
