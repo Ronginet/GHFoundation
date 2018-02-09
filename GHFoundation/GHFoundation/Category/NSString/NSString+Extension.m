@@ -10,12 +10,12 @@
 
 @implementation NSString (Extension)
 
-- (BOOL)isValidateWithRegex:(NSString *)regex {
+- (BOOL)gh_isValidateWithRegex:(NSString *)regex {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [predicate evaluateWithObject:self];
 }
 
-- (BOOL)isMobileNumber {
+- (BOOL)gh_isMobileNumber {
     // 移动: 134,135,136,137,138,139,150,151,157,158,159,187,188
     // 联通: 130,131,132,152,155,156,185,186
     // 电信: 133,153,180,189
@@ -24,13 +24,13 @@
     return [predicate evaluateWithObject:self];
 }
 
-- (BOOL)isEmail {
+- (BOOL)gh_isEmail {
     NSString *regex = @"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [predicate evaluateWithObject:self];
 }
 
-- (BOOL)isIdentityCard {
+- (BOOL)gh_isIdentityCard {
     if (self.length <= 0) {
         return NO;
     }
@@ -40,18 +40,18 @@
     return [predicate evaluateWithObject:self];
 }
 
-+ (BOOL)isEmpty:(NSString *)string {
++ (BOOL)gh_isEmpty:(NSString *)string {
     if (!string || string.length == 0 || [string isEqual:[NSNull null]]) {
         return YES;
     }
     return NO;
 }
 
-+ (BOOL)isNotEmpty:(NSString *)string {
-    return ![self isEmpty:string];
++ (BOOL)gh_isNotEmpty:(NSString *)string {
+    return ![self gh_isEmpty:string];
 }
 
-- (NSArray<NSValue *>*)rangesOfText:(NSString *)text options:(NSStringCompareOptions)mask {
+- (NSArray<NSValue *>*)gh_rangesOfText:(NSString *)text options:(NSStringCompareOptions)mask {
     if (!text && text.length == 0) {
         return @[];
     }
@@ -70,6 +70,12 @@
     }
     
     return arrM.copy;
+}
+
+- (BOOL)gh_isChinese {
+    NSString *match=@"(^[\u4e00-\u9fa5]+$)";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
+    return [predicate evaluateWithObject:self];
 }
 
 @end

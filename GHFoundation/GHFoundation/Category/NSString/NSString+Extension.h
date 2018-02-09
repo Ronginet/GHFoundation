@@ -11,24 +11,27 @@
 @interface NSString (Extension)
 
 /// 通用正则合法性判断
-- (BOOL)isValidateWithRegex:(NSString *)regex;
+- (BOOL)gh_isValidateWithRegex:(NSString *)regex;
 
 /// 判断是否为移动电话
-- (BOOL)isMobileNumber;
+- (BOOL)gh_isMobileNumber;
 
 /// 判断是否为邮箱
-- (BOOL)isEmail;
+- (BOOL)gh_isEmail;
 
 /// 身份证号码验证
-- (BOOL)isIdentityCard;
+- (BOOL)gh_isIdentityCard;
 
 /// 字符串是否为空
-+ (BOOL)isEmpty:(NSString *)string;
++ (BOOL)gh_isEmpty:(NSString *)string;
 
 /// 字符串是否不为空
-+ (BOOL)isNotEmpty:(NSString *)string;
++ (BOOL)gh_isNotEmpty:(NSString *)string;
 
 /// 获取子字符串在父字符串中出现的range
-- (NSArray<NSValue *>*)rangesOfText:(NSString *)text options:(NSStringCompareOptions)mask;
+- (NSArray<NSValue *>*)gh_rangesOfText:(NSString *)text options:(NSStringCompareOptions)mask;
+
+/// 是否纯中文
+- (BOOL)gh_isChinese;
 
 @end
