@@ -9,6 +9,8 @@
 #ifndef GHBaseDefine_h
 #define GHBaseDefine_h
 
+#import "Singleton.h"
+
 /*
   iPhone 4/4s 宽高: 320 x 480
   iPhone 5/SE 宽高: 320 x 568

@@ -50,6 +50,7 @@
 		E4644C7E202DC8B4006E0E80 /* GHBaseDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHBaseDefine.h; sourceTree = "<group>"; };
 		E4644C80202DD834006E0E80 /* AudioPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlay.h; sourceTree = "<group>"; };
 		E4644C81202DD834006E0E80 /* AudioPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlay.m; sourceTree = "<group>"; };
+		E4644C83202DDA94006E0E80 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		E478BDB8200E446000C2358E /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		E478BDB9200E446000C2358E /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		E47A709120220E5100E1EB5D /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				E4644C7E202DC8B4006E0E80 /* GHBaseDefine.h */,
+				E4644C83202DDA94006E0E80 /* Singleton.h */,
 			);
 			path = BaseConfig;
 			sourceTree = "<group>";

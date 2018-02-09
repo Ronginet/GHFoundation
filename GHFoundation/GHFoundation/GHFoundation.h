@@ -10,7 +10,7 @@
 #define GHFoundation_h
 
 // BaseDefine
-#Import "GHBaseConfig.h"
+#Import "GHBaseDefine.h"
 
 // Category
 #import "NSString+Extension.h"
