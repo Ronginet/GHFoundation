@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B2F0202DB87B009BF409 /* NSString+File.m */; };
 		E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */; };
 		E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */; };
 		E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E478BDB9200E446000C2358E /* NSDate+Extension.m */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E402B2EF202DB87B009BF409 /* NSString+File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+File.h"; sourceTree = "<group>"; };
+		E402B2F0202DB87B009BF409 /* NSString+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+File.m"; sourceTree = "<group>"; };
 		E42120C62018DE0500CE9BA2 /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
 		E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
 		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 			children = (
 				E4F68EFD1F92481F00CD49D0 /* NSString+Extension.h */,
 				E4F68EFE1F92481F00CD49D0 /* NSString+Extension.m */,
+				E402B2EF202DB87B009BF409 /* NSString+File.h */,
+				E402B2F0202DB87B009BF409 /* NSString+File.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				E49BFFFE1F877BC20080035A /* main.m in Sources */,
 				E47A709320220E5100E1EB5D /* UIColor+Extension.m in Sources */,
 				E4EF8A261FB89EDC00D8BEB0 /* UIView+Extension.m in Sources */,
+				E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */,
 				E49BFFF01F877BC20080035A /* AppDelegate.m in Sources */,
 				E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */,
 			);
