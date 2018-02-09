@@ -9,8 +9,12 @@
 #ifndef GHFoundation_h
 #define GHFoundation_h
 
+// BaseDefine
+#Import "GHBaseConfig.h"
+
 // Category
 #import "NSString+Extension.h"
+#import "NSString+File.h"
 #import "NSDictionary+Extension.h"
 #import "NSData+Image.h"
 #import "NSDate+Extension.h"
