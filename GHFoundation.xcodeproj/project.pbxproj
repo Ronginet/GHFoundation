@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B2F0202DB87B009BF409 /* NSString+File.m */; };
+		E402B36C202DBB11009BF409 /* GHFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B36B202DBB11009BF409 /* GHFoundationTests.m */; };
 		E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */; };
 		E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */; };
 		E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E478BDB9200E446000C2358E /* NSDate+Extension.m */; };
@@ -25,9 +26,22 @@
 		E4F68EFF1F92481F00CD49D0 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F68EFE1F92481F00CD49D0 /* NSString+Extension.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E402B36E202DBB11009BF409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49BFFE31F877BC20080035A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49BFFEA1F877BC20080035A;
+			remoteInfo = GHFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E402B2EF202DB87B009BF409 /* NSString+File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+File.h"; sourceTree = "<group>"; };
 		E402B2F0202DB87B009BF409 /* NSString+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+File.m"; sourceTree = "<group>"; };
+		E402B369202DBB11009BF409 /* GHFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E402B36B202DBB11009BF409 /* GHFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHFoundationTests.m; sourceTree = "<group>"; };
+		E402B36D202DBB11009BF409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42120C62018DE0500CE9BA2 /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
 		E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
 		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
@@ -61,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E402B366202DBB11009BF409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E49BFFE81F877BC20080035A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E402B36A202DBB11009BF409 /* GHFoundationTests */ = {
+			isa = PBXGroup;
+			children = (
+				E402B36B202DBB11009BF409 /* GHFoundationTests.m */,
+				E402B36D202DBB11009BF409 /* Info.plist */,
+			);
+			path = GHFoundationTests;
+			sourceTree = "<group>";
+		};
 		E42120C52018DDF100CE9BA2 /* UIDevice */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				E49BFFED1F877BC20080035A /* GHFoundation */,
+				E402B36A202DBB11009BF409 /* GHFoundationTests */,
 				E49BFFEC1F877BC20080035A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				E49BFFEB1F877BC20080035A /* GHFoundation.app */,
+				E402B369202DBB11009BF409 /* GHFoundationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,6 +240,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E402B368202DBB11009BF409 /* GHFoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E402B370202DBB11009BF409 /* Build configuration list for PBXNativeTarget "GHFoundationTests" */;
+			buildPhases = (
+				E402B365202DBB11009BF409 /* Sources */,
+				E402B366202DBB11009BF409 /* Frameworks */,
+				E402B367202DBB11009BF409 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E402B36F202DBB11009BF409 /* PBXTargetDependency */,
+			);
+			name = GHFoundationTests;
+			productName = GHFoundationTests;
+			productReference = E402B369202DBB11009BF409 /* GHFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E49BFFEA1F877BC20080035A /* GHFoundation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E49B00011F877BC20080035A /* Build configuration list for PBXNativeTarget "GHFoundation" */;
@@ -234,6 +284,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Rong;
 				TargetAttributes = {
+					E402B368202DBB11009BF409 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E49BFFEA1F877BC20080035A;
+					};
 					E49BFFEA1F877BC20080035A = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -254,11 +309,19 @@
 			projectRoot = "";
 			targets = (
 				E49BFFEA1F877BC20080035A /* GHFoundation */,
+				E402B368202DBB11009BF409 /* GHFoundationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E402B367202DBB11009BF409 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E49BFFE91F877BC20080035A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +335,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E402B365202DBB11009BF409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E402B36C202DBB11009BF409 /* GHFoundationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E49BFFE71F877BC20080035A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,7 +365,47 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E402B36F202DBB11009BF409 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E49BFFEA1F877BC20080035A /* GHFoundation */;
+			targetProxy = E402B36E202DBB11009BF409 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E402B371202DBB11009BF409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = GHFoundationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rong.GHFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GHFoundation.app/GHFoundation";
+			};
+			name = Debug;
+		};
+		E402B372202DBB11009BF409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = GHFoundationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rong.GHFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GHFoundation.app/GHFoundation";
+			};
+			name = Release;
+		};
 		E49B00001F877BC20080035A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -430,6 +541,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E402B370202DBB11009BF409 /* Build configuration list for PBXNativeTarget "GHFoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E402B371202DBB11009BF409 /* Debug */,
+				E402B372202DBB11009BF409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E49B00011F877BC20080035A /* Build configuration list for PBXNativeTarget "GHFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
