@@ -18,4 +18,6 @@
 
 + (UIImage *)gh_animatedGIFWithData:(NSData *)data;
 
++ (UIImage *)gh_stretchedImageWithName:(NSString *)name;
+
 @end
