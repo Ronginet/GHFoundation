@@ -46,6 +46,7 @@
 		E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
 		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
 		E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
+		E4644C7E202DC8B4006E0E80 /* GHBaseDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHBaseDefine.h; sourceTree = "<group>"; };
 		E478BDB8200E446000C2358E /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		E478BDB9200E446000C2358E /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		E47A709120220E5100E1EB5D /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
@@ -128,6 +129,14 @@
 			path = NSDictionary;
 			sourceTree = "<group>";
 		};
+		E4644C7C202DBF55006E0E80 /* BaseConfig */ = {
+			isa = PBXGroup;
+			children = (
+				E4644C7E202DC8B4006E0E80 /* GHBaseDefine.h */,
+			);
+			path = BaseConfig;
+			sourceTree = "<group>";
+		};
 		E478BDB7200E444900C2358E /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				E47A709420220EFB00E1EB5D /* GHFoundation.h */,
+				E4644C7C202DBF55006E0E80 /* BaseConfig */,
 				E49B00491F87B45C0080035A /* Category */,
 			);
 			path = GHFoundation;
@@ -548,6 +558,7 @@
 				E402B372202DBB11009BF409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E49B00011F877BC20080035A /* Build configuration list for PBXNativeTarget "GHFoundation" */ = {
 			isa = XCConfigurationList;
