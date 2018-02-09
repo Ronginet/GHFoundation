@@ -10,8 +10,10 @@
 
 @interface UIDevice (Extension)
 
-- (BOOL)isiPhone;
+- (BOOL)gh_isiPhone;
 
-- (BOOL)isiPad;
+- (BOOL)gh_isiPad;
+
+- (CGFloat)gh_currentSystemVersion;
 
 @end

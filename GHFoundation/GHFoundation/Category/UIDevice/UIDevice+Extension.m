@@ -10,18 +10,22 @@
 
 @implementation UIDevice (Extension)
 
-- (BOOL)isiPhone {
+- (BOOL)gh_isiPhone {
     if ([[UIDevice currentDevice].model isEqualToString:@"iPhone"]) {
         return YES;
     }
     return NO;
 }
 
-- (BOOL)isiPad {
+- (BOOL)gh_isiPad {
     if ([[UIDevice currentDevice].model isEqualToString:@"iPad"]) {
         return YES;
     }
     return NO;
+}
+
+- (CGFloat)gh_currentSystemVersion {
+    return [UIDevice currentDevice].systemVersion.floatValue;
 }
 
 @end
