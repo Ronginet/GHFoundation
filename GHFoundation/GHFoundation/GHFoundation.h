@@ -10,13 +10,13 @@
 #define GHFoundation_h
 
 // BaseDefine
-#Import "GHBaseDefine.h"
+#import "GHBaseDefine.h"
 
 // Category
 #import "NSString+Extension.h"
 #import "NSString+File.h"
 #import "NSDictionary+Extension.h"
-#import "NSData+Image.h"
+#import "NSData+ImageFormat.h"
 #import "NSDate+Extension.h"
 
 #import "UIView+Frame.h"

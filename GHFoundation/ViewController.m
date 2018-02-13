@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSString+Extension.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSString *str = @"汉字";
+    BOOL flag = [str gh_isChinese];
+    NSLog(@"%d",flag);
+    
 }
 
 
