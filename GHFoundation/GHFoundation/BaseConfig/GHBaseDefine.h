@@ -85,12 +85,38 @@
 // 当前系统版本
 #define CurrentSystemVersion   [[[UIDevice currentDevice] systemVersion] floatValue]
 
+// 判断是否为iPhone
+#define IS_iPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+// 判断是否为iPad
+#define IS_iPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+// 判断是否为ipod
+#define IS_iPod ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
+
+// 判断是否为 iPhone 5/SE
+#define iPhone_5_SE [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 568.0f
+
+// 判断是否为iPhone 6/6s
+#define iPhone_6_6s [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 667.0f
+
+// 判断是否为iPhone 6Plus/6sPlus
+#define iPhone6Plus_6Plus [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
+
+
 #if TARGET_OS_IPHONE
 //iPhone Device
 #endif
 
 #if TARGET_IPHONE_SIMULATOR
 //iPhone Simulator
+#endif
+
+// ARC 和 MRC
+#if __has_feature(objc_arc)
+// ARC
+#else
+// MRC
 #endif
 
 // 沙盒相关目录
