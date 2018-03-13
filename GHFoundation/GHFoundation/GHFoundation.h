@@ -24,6 +24,7 @@
 #import "UIColor+Extension.h"
 #import "UIDevice+Extension.h"
 #import "UIImage+Extension.h"
+#import "UIBarButtonItem+Extension.h"
 
 
 #endif /* GHFoundation_h */
