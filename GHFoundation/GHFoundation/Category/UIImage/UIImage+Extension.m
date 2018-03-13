@@ -24,16 +24,12 @@
 }
 
 + (UIImage *)gh_imageWithColor:(UIColor *)color cornerRadius:(CGFloat)cornerRadius {
-    UIImage *original = self;
-    CGRect frame = CGRectMake(0, 0, original.size.width, original.size.height);
-    // 开始一个Image的上下文
-    UIGraphicsBeginImageContextWithOptions(original.size, NO, 1.0);
-    // 添加圆角
-    [[UIBezierPath bezierPathWithRoundedRect:frame
-                                cornerRadius:cornerRadius] addClip];
-    // 绘制图片
-    [original drawInRect:frame];
-    // 接受绘制成功的图片
+    CGRect rect = CGRectMake(0, 0, cornerRadius * [UIScreen mainScreen].scale, cornerRadius * [UIScreen mainScreen].scale);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextAddEllipseInRect(context, rect);
+    [color setFill];
+    CGContextFillPath(context);
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
