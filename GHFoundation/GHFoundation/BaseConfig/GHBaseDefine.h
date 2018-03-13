@@ -37,7 +37,7 @@
 
 // RGB颜色/设置RGBA颜色
 #define GHRGBColor(r, g, b)      GHRGBAColor(r, g, b, 1.0)
-#define GHRGBAColor(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
+#define GHRGBAColor(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 
 // 随机颜色
 #define GHRandomColor            GHRGBAColor((arc4random_uniform(256) / 255.0), (arc4random_uniform(256) / 255.0), (arc4random_uniform(256) / 255.0), 1.0)
