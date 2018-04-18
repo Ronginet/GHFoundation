@@ -37,4 +37,7 @@
 /// json字符串转字典
 - (NSDictionary *)toDictionary;
 
+/// 字典转json字符串
++ (NSString *)jsonStringWithDictionary:(NSDictionary *)dict;
+
 @end

@@ -88,4 +88,20 @@
     return dict;
 }
 
++ (NSString *)jsonStringWithDictionary:(NSDictionary *)dict {
+    if (!dict) {
+        return nil;
+    }
+    if ([dict allKeys].count == 0) {
+        return nil;
+    }
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    if (error) {
+        return nil;
+    }
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+
 @end
