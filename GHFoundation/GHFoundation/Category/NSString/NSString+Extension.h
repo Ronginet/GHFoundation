@@ -34,4 +34,7 @@
 /// 是否纯中文
 - (BOOL)gh_isChinese;
 
+/// json字符串转字典
+- (NSDictionary *)toDictionary;
+
 @end

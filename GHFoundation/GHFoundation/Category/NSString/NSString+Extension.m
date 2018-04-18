@@ -78,4 +78,14 @@
     return [predicate evaluateWithObject:self];
 }
 
+- (NSDictionary *)toDictionary {
+    NSError *error;
+    NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    if (error) {
+        return nil;
+    }
+    return dict;
+}
+
 @end
