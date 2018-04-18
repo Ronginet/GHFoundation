@@ -13,4 +13,7 @@
 /// json 字符串转字典
 + (NSDictionary *)dictionaryWithJSONString:(NSString *)JSONString;
 
+/// 字典转json字符串
+- (NSString *)toJSONString;
+
 @end

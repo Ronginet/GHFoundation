@@ -24,4 +24,17 @@
     return jsonDict;
 }
 
+- (NSString *)toJSONString {
+    if ([self allKeys].count == 0) {
+        return nil;
+    }
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&error];
+    if (error) {
+        return nil;
+    }
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+
 @end
