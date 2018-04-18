@@ -11,6 +11,6 @@
 @interface NSDictionary (Extension)
 
 /// json 字符串转字典
-+ (NSDictionary *)jsonStringToDictionary:(NSString *)JSONString;
++ (NSDictionary *)dictionaryWithJSONString:(NSString *)JSONString;
 
 @end

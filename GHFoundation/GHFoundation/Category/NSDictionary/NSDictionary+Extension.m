@@ -10,7 +10,7 @@
 
 @implementation NSDictionary (Extension)
 
-+ (NSDictionary *)jsonStringToDictionary:(NSString *)JSONString {
++ (NSDictionary *)dictionaryWithJSONString:(NSString *)JSONString {
     if (!JSONString) {
         return nil;
     }
