@@ -20,6 +20,7 @@
 		E49BFFF31F877BC20080035A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFF21F877BC20080035A /* ViewController.m */; };
 		E49BFFF81F877BC20080035A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49BFFF71F877BC20080035A /* Assets.xcassets */; };
 		E49BFFFE1F877BC20080035A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFFD1F877BC20080035A /* main.m */; };
+		E4E4C82420A5152D00D42410 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4C82320A5152D00D42410 /* NSString+Base64.m */; };
 		E4EF8A231FB89C4C00D8BEB0 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EF8A221FB89C4C00D8BEB0 /* UIImage+Extension.m */; };
 		E4EF8A261FB89EDC00D8BEB0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EF8A251FB89EDC00D8BEB0 /* UIView+Extension.m */; };
 		E4EF8A281FB8A08800D8BEB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EF8A271FB8A08800D8BEB0 /* LaunchScreen.storyboard */; };
@@ -69,6 +70,8 @@
 		E49BFFF71F877BC20080035A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E49BFFFC1F877BC20080035A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49BFFFD1F877BC20080035A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4E4C82220A5152D00D42410 /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		E4E4C82320A5152D00D42410 /* NSString+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		E4EF8A211FB89C4C00D8BEB0 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		E4EF8A221FB89C4C00D8BEB0 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		E4EF8A241FB89EDC00D8BEB0 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 				E4F68EFE1F92481F00CD49D0 /* NSString+Extension.m */,
 				E402B2EF202DB87B009BF409 /* NSString+File.h */,
 				E402B2F0202DB87B009BF409 /* NSString+File.m */,
+				E4E4C82220A5152D00D42410 /* NSString+Base64.h */,
+				E4E4C82320A5152D00D42410 /* NSString+Base64.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				E49BFFF31F877BC20080035A /* ViewController.m in Sources */,
 				E49BFFFE1F877BC20080035A /* main.m in Sources */,
 				E4644C82202DD834006E0E80 /* AudioPlay.m in Sources */,
+				E4E4C82420A5152D00D42410 /* NSString+Base64.m in Sources */,
 				E47A709320220E5100E1EB5D /* UIColor+Extension.m in Sources */,
 				E4EF8A261FB89EDC00D8BEB0 /* UIView+Extension.m in Sources */,
 				E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */,
