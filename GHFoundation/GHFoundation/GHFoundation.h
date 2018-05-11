@@ -27,5 +27,8 @@
 #import "UIImage+Extension.h"
 #import "UIBarButtonItem+Extension.h"
 
+// View
+#import "GHTextView.h"
+
 
 #endif /* GHFoundation_h */
