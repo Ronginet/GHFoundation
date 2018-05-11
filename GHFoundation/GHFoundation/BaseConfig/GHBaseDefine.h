@@ -12,11 +12,20 @@
 #import "Singleton.h"
 
 /*
-  iPhone 4/4s 宽高: 320 x 480
-  iPhone 5/SE 宽高: 320 x 568
-  iPhone 6/7  宽高: 375 x 667
-  iPhone 6plus/7plus 宽高: 414 x 736
-*/
+ iPhone 4/4s 宽高: 320 x 480 -- @2x
+ iPhone 5/SE 宽高: 320 x 568 -- @2x
+ iPhone 6/7/8  宽高: 375 x 667 -- @2x
+ iPhone 6/7/8 plus 宽高: 414 x 736 -- @3x
+ iPhone X 宽高: 375 x 812 -- @3x
+ */
+
+// 设备类型
+#define isiPhone4S()          (SCREEN_HEIGHT == 480)
+#define isiPhone5()           (SCREEN_HEIGHT == 568)
+#define isiPhone6()           (SCREEN_HEIGHT == 667)
+#define isiPhone6P()          (SCREEN_HEIGHT == 736)
+#define isiPhoneX()           (Screen_Height == 812)
+
 
 // 屏幕宽高
 // 需要横屏或者竖屏，获取屏幕宽度与高度
