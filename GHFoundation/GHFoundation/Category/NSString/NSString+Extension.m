@@ -104,4 +104,28 @@
     return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
++ (NSString *)removeInvalidZeroWithFloat:(CGFloat)floatValue {
+    NSString *floatString = [NSString stringWithFormat:@"%f",floatValue];
+    const char *floatChar = [floatString UTF8String];
+    NSUInteger length = 0;
+    NSInteger i = floatString.length - 1;
+    for(; i >= 0; i--) {
+        if(floatChar[i] == '0') {
+            length++;
+        } else {
+            if(floatChar[i] == '.')
+                i--;
+            break;
+        }
+    }
+    
+    NSString *returnString;
+    if(i == -1) {
+        returnString = @"0";
+    } else {
+        returnString = [floatString substringToIndex:i+1];
+    }
+    return returnString;
+}
+
 @end

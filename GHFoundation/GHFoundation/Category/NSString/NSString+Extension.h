@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSString (Extension)
 
@@ -39,5 +40,8 @@
 
 /// 字典转json字符串
 + (NSString *)jsonStringWithDictionary:(NSDictionary *)dict;
+
+/// 移除浮点数中无效的零
++ (NSString *)removeInvalidZeroWithFloat:(CGFloat)floatValue;
 
 @end
