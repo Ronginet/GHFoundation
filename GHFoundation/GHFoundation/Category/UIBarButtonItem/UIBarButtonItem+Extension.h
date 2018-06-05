@@ -13,4 +13,7 @@
 + (UIBarButtonItem *)barButtonWithTitle:(NSString *)title target:(id)target action:(SEL)action;
 + (UIBarButtonItem *)barButtonWithImage:(NSString *)imgName target:(id)target action:(SEL)action;
 
+- (void)updateBarButtonTitleColor:(UIColor *)color;
+- (void)updateBarButtonImage:(UIImage *)image;
+
 @end

@@ -31,4 +31,18 @@
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
+- (void)updateBarButtonTitleColor:(UIColor *)color {
+    UIButton *button = self.customView;
+    if ([button isKindOfClass:[UIButton class]]) {
+        [button setTitleColor:color forState:UIControlStateNormal];
+    }
+}
+
+- (void)updateBarButtonImage:(UIImage *)image {
+    UIButton *button = self.customView;
+    if ([button isKindOfClass:[UIButton class]]) {
+        [button setImage:image forState:UIControlStateNormal];
+    }
+}
+
 @end
