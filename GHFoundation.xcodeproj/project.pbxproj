@@ -22,6 +22,7 @@
 		E49BFFF81F877BC20080035A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49BFFF71F877BC20080035A /* Assets.xcassets */; };
 		E49BFFFE1F877BC20080035A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFFD1F877BC20080035A /* main.m */; };
 		E4B655F820C6DBFC006B6F56 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B655F720C6DBFC006B6F56 /* UIBarButtonItem+Extension.m */; };
+		E4BEDC2C20E471D900F6F98E /* GHCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BEDC2B20E471D900F6F98E /* GHCopyLabel.m */; };
 		E4E4C82420A5152D00D42410 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4C82320A5152D00D42410 /* NSString+Base64.m */; };
 		E4EF8A231FB89C4C00D8BEB0 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EF8A221FB89C4C00D8BEB0 /* UIImage+Extension.m */; };
 		E4EF8A261FB89EDC00D8BEB0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EF8A251FB89EDC00D8BEB0 /* UIView+Extension.m */; };
@@ -76,6 +77,8 @@
 		E49BFFFD1F877BC20080035A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4B655F620C6DBFC006B6F56 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		E4B655F720C6DBFC006B6F56 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		E4BEDC2A20E471D900F6F98E /* GHCopyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHCopyLabel.h; sourceTree = "<group>"; };
+		E4BEDC2B20E471D900F6F98E /* GHCopyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHCopyLabel.m; sourceTree = "<group>"; };
 		E4E4C82220A5152D00D42410 /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		E4E4C82320A5152D00D42410 /* NSString+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		E4EF8A211FB89C4C00D8BEB0 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 		E425B40D20A534FB00A68D68 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E4BEDC2920E471CF00F6F98E /* CopyLabel */,
 				E425B40E20A534FB00A68D68 /* TextView */,
 			);
 			path = View;
@@ -279,6 +283,15 @@
 			path = UIBarButtonItem;
 			sourceTree = "<group>";
 		};
+		E4BEDC2920E471CF00F6F98E /* CopyLabel */ = {
+			isa = PBXGroup;
+			children = (
+				E4BEDC2A20E471D900F6F98E /* GHCopyLabel.h */,
+				E4BEDC2B20E471D900F6F98E /* GHCopyLabel.m */,
+			);
+			path = CopyLabel;
+			sourceTree = "<group>";
+		};
 		E4EF8A201FB89C1200D8BEB0 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +432,7 @@
 				E4955F8C202376F700B31FC3 /* NSData+ImageFormat.m in Sources */,
 				E425B41120A5351700A68D68 /* GHTextView.m in Sources */,
 				E49BFFF31F877BC20080035A /* ViewController.m in Sources */,
+				E4BEDC2C20E471D900F6F98E /* GHCopyLabel.m in Sources */,
 				E49BFFFE1F877BC20080035A /* main.m in Sources */,
 				E4644C82202DD834006E0E80 /* AudioPlay.m in Sources */,
 				E4E4C82420A5152D00D42410 /* NSString+Base64.m in Sources */,

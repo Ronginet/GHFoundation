@@ -29,6 +29,7 @@
 
 // View
 #import "GHTextView.h"
+#import "GHCopyLabel.h"
 
 
 #endif /* GHFoundation_h */
