@@ -44,4 +44,7 @@
 /// 移除浮点数中无效的零
 + (NSString *)removeInvalidZeroWithFloat:(CGFloat)floatValue;
 
+/// 银行卡号显示格式化,显示后4位数字, 其他用*占位
++ (NSString *)separatorBankCardNO:(NSString *)bankCardNO;
+
 @end

@@ -128,4 +128,42 @@
     return returnString;
 }
 
++ (NSString *)separatorBankCardNO:(NSString *)bankCardNO {
+    NSString *tempText = [bankCardNO stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSString *returnText = @"";
+    if(tempText.length >= 10){
+        NSRange subRange = NSMakeRange(tempText.length - 4, 4);
+        NSString *subString = [tempText substringWithRange:subRange];
+        
+        NSString *tmpStr = @"";
+        for (int i = 0; i < 12; i++) {
+            tmpStr = [tmpStr stringByAppendingString:@"*"];
+        }
+        returnText = [tmpStr stringByAppendingString:subString];
+        
+        NSInteger returnTextLength = returnText.length;
+        NSString *formatStr = @"";
+        NSString *subStr = @"";
+        
+        for (NSUInteger i = 0; i < returnTextLength; i += 4){
+            if(i < returnTextLength - 5){
+                NSRange range = NSMakeRange(i, 4);
+                subStr = [returnText substringWithRange:range];
+                formatStr = [formatStr stringByAppendingString:subStr];
+                formatStr = [formatStr stringByAppendingString:@" "];
+            } else {
+                NSRange range = NSMakeRange(i, returnTextLength - i);
+                subStr = [returnText substringWithRange:range];
+                formatStr = [formatStr stringByAppendingString:subStr];
+                returnText = formatStr;
+                break;
+            }
+        }
+    } else {
+        returnText = tempText;
+    }
+    return returnText;
+}
+
 @end
