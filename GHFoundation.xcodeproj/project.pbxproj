@@ -12,6 +12,7 @@
 		E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */; };
 		E425B41120A5351700A68D68 /* GHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E425B41020A5351600A68D68 /* GHTextView.m */; };
 		E432114D2102225C00471EC5 /* GHAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E432114C2102225C00471EC5 /* GHAppInfo.m */; };
+		E4321150210222E200471EC5 /* GHDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E432114F210222E200471EC5 /* GHDeviceInfo.m */; };
 		E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */; };
 		E4644C82202DD834006E0E80 /* AudioPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E4644C81202DD834006E0E80 /* AudioPlay.m */; };
 		E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E478BDB9200E446000C2358E /* NSDate+Extension.m */; };
@@ -54,6 +55,8 @@
 		E425B41020A5351600A68D68 /* GHTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHTextView.m; sourceTree = "<group>"; };
 		E432114B2102225C00471EC5 /* GHAppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHAppInfo.h; sourceTree = "<group>"; };
 		E432114C2102225C00471EC5 /* GHAppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHAppInfo.m; sourceTree = "<group>"; };
+		E432114E210222E200471EC5 /* GHDeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHDeviceInfo.h; sourceTree = "<group>"; };
+		E432114F210222E200471EC5 /* GHDeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHDeviceInfo.m; sourceTree = "<group>"; };
 		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
 		E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
 		E4644C7E202DC8B4006E0E80 /* GHBaseDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHBaseDefine.h; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 				E4644C81202DD834006E0E80 /* AudioPlay.m */,
 				E432114B2102225C00471EC5 /* GHAppInfo.h */,
 				E432114C2102225C00471EC5 /* GHAppInfo.m */,
+				E432114E210222E200471EC5 /* GHDeviceInfo.h */,
+				E432114F210222E200471EC5 /* GHDeviceInfo.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4321150210222E200471EC5 /* GHDeviceInfo.m in Sources */,
 				E4F68EFF1F92481F00CD49D0 /* NSString+Extension.m in Sources */,
 				E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */,
 				E4EF8A231FB89C4C00D8BEB0 /* UIImage+Extension.m in Sources */,

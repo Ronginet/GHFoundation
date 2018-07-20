@@ -33,6 +33,6 @@
 
 // Utility
 #import "GHAppInfo.h"
-
+#import "GHDeviceInfo.h"
 
 #endif /* GHFoundation_h */
