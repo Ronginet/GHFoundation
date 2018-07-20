@@ -31,5 +31,8 @@
 #import "GHTextView.h"
 #import "GHCopyLabel.h"
 
+// Utility
+#import "GHAppInfo.h"
+
 
 #endif /* GHFoundation_h */
