@@ -16,6 +16,7 @@
 #import "NSString+Extension.h"
 #import "NSString+File.h"
 #import "NSString+Base64.h"
+#import "NSString+PinYin.h"
 #import "NSDictionary+Extension.h"
 #import "NSData+ImageFormat.h"
 #import "NSDate+Extension.h"

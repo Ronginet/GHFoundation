@@ -14,6 +14,7 @@
 		E432114D2102225C00471EC5 /* GHAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E432114C2102225C00471EC5 /* GHAppInfo.m */; };
 		E4321150210222E200471EC5 /* GHDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E432114F210222E200471EC5 /* GHDeviceInfo.m */; };
 		E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */; };
+		E45CC021210DCD6400CB6448 /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = E45CC020210DCD6400CB6448 /* NSString+PinYin.m */; };
 		E4644C82202DD834006E0E80 /* AudioPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E4644C81202DD834006E0E80 /* AudioPlay.m */; };
 		E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E478BDB9200E446000C2358E /* NSDate+Extension.m */; };
 		E47A709320220E5100E1EB5D /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E47A709220220E5100E1EB5D /* UIColor+Extension.m */; };
@@ -59,6 +60,8 @@
 		E432114F210222E200471EC5 /* GHDeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHDeviceInfo.m; sourceTree = "<group>"; };
 		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
 		E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
+		E45CC01F210DCD6400CB6448 /* NSString+PinYin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin.h"; sourceTree = "<group>"; };
+		E45CC020210DCD6400CB6448 /* NSString+PinYin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin.m"; sourceTree = "<group>"; };
 		E4644C7E202DC8B4006E0E80 /* GHBaseDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHBaseDefine.h; sourceTree = "<group>"; };
 		E4644C80202DD834006E0E80 /* AudioPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlay.h; sourceTree = "<group>"; };
 		E4644C81202DD834006E0E80 /* AudioPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlay.m; sourceTree = "<group>"; };
@@ -320,6 +323,8 @@
 				E402B2F0202DB87B009BF409 /* NSString+File.m */,
 				E4E4C82220A5152D00D42410 /* NSString+Base64.h */,
 				E4E4C82320A5152D00D42410 /* NSString+Base64.m */,
+				E45CC01F210DCD6400CB6448 /* NSString+PinYin.h */,
+				E45CC020210DCD6400CB6448 /* NSString+PinYin.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				E4321150210222E200471EC5 /* GHDeviceInfo.m in Sources */,
 				E4F68EFF1F92481F00CD49D0 /* NSString+Extension.m in Sources */,
 				E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */,
+				E45CC021210DCD6400CB6448 /* NSString+PinYin.m in Sources */,
 				E4EF8A231FB89C4C00D8BEB0 /* UIImage+Extension.m in Sources */,
 				E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */,
 				E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */,
