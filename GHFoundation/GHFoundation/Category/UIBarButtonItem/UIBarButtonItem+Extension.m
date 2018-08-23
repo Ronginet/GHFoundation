@@ -45,4 +45,13 @@
     }
 }
 
+- (UIButton *)customButton {
+    UIButton *button = self.customView;
+    if ([button isKindOfClass:[UIButton class]]) {
+        return button;
+    } else {
+        return nil;
+    }
+}
+
 @end

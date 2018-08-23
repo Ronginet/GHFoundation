@@ -16,4 +16,6 @@
 - (void)updateBarButtonTitleColor:(UIColor *)color;
 - (void)updateBarButtonImage:(UIImage *)image;
 
+- (__kindof UIButton *)customButton;
+
 @end
