@@ -41,7 +41,7 @@
 }
 
 + (BOOL)gh_isEmpty:(NSString *)string {
-    if (!string || string.length == 0 || [string isEqual:[NSNull null]]) {
+    if (!string || string.length == 0 || [string isEqual:[NSNull null]] || [string isEqualToString:@"(null)"] || [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0) {
         return YES;
     }
     return NO;
