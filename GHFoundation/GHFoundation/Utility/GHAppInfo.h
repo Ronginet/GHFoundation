@@ -13,4 +13,6 @@
 /// 只包含bundle的version,不带"V",eg:1.0.0
 + (NSString *)appVersion;
 
++ (NSString *)appDisplayName;
+
 @end
