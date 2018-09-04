@@ -57,7 +57,7 @@
 // Log
 #ifdef DEBUG
 
-#define GHLog(...) NSLog(@"%s \n Line = %d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define GHLog(...) NSLog(@"%s (Line = %d) \n\n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
 
 //#define GHLog(format, ...)  printf("[%s] %s [%d line] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String])
 #else
