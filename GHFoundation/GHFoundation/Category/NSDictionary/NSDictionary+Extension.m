@@ -10,7 +10,7 @@
 
 @implementation NSDictionary (Extension)
 
-+ (NSDictionary *)dictionaryWithJSONString:(NSString *)JSONString {
++ (NSDictionary *)gh_dictionaryWithJSONString:(NSString *)JSONString {
     if (!JSONString) {
         return nil;
     }
@@ -24,7 +24,7 @@
     return jsonDict;
 }
 
-- (NSString *)toJSONString {
+- (NSString *)gh_toJSONString {
     if ([self allKeys].count == 0) {
         return nil;
     }

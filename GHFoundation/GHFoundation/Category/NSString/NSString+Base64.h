@@ -10,7 +10,7 @@
 
 @interface NSString (Base64)
 
-+ (NSString *)encode:(NSString *)string;
-+ (NSString *)decode:(NSString *)base64String;
++ (NSString *)gh_encode:(NSString *)string;
++ (NSString *)gh_decode:(NSString *)base64String;
 
 @end

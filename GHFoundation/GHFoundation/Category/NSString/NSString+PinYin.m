@@ -10,11 +10,11 @@
 
 @implementation NSString (PinYin)
 
-- (NSString *)pinyin {
-    return [[self pinyinSpace] stringByReplacingOccurrencesOfString:@" " withString:@""];
+- (NSString *)gh_pinyin {
+    return [[self gh_pinyinSpace] stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 
-- (NSString *)pinyinSpace {
+- (NSString *)gh_pinyinSpace {
     NSMutableString *str = [self mutableCopy];
     CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformMandarinLatin, NO);
     CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformStripDiacritics, NO);

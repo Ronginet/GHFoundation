@@ -10,7 +10,7 @@
 
 @implementation UIBarButtonItem (Extension)
 
-+ (UIBarButtonItem *)barButtonWithTitle:(NSString *)title target:(id)target action:(SEL)action {
++ (UIBarButtonItem *)gh_barButtonWithTitle:(NSString *)title target:(id)target action:(SEL)action {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -21,7 +21,7 @@
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
-+ (UIBarButtonItem *)barButtonWithImage:(NSString *)imgName target:(id)target action:(SEL)action {
++ (UIBarButtonItem *)gh_barButtonWithImage:(NSString *)imgName target:(id)target action:(SEL)action {
     UIImage *image = [UIImage imageNamed:imgName];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:image forState:UIControlStateNormal];
@@ -31,21 +31,21 @@
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
-- (void)updateBarButtonTitleColor:(UIColor *)color {
+- (void)gh_updateBarButtonTitleColor:(UIColor *)color {
     UIButton *button = self.customView;
     if ([button isKindOfClass:[UIButton class]]) {
         [button setTitleColor:color forState:UIControlStateNormal];
     }
 }
 
-- (void)updateBarButtonImage:(UIImage *)image {
+- (void)gh_updateBarButtonImage:(UIImage *)image {
     UIButton *button = self.customView;
     if ([button isKindOfClass:[UIButton class]]) {
         [button setImage:image forState:UIControlStateNormal];
     }
 }
 
-- (UIButton *)customButton {
+- (UIButton *)gh_customButton {
     UIButton *button = self.customView;
     if ([button isKindOfClass:[UIButton class]]) {
         return button;

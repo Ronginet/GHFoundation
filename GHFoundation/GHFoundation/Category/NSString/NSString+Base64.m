@@ -11,7 +11,7 @@
 
 @implementation NSString (Base64)
 
-+ (NSString *)encode:(NSString *)string {
++ (NSString *)gh_encode:(NSString *)string {
     if ([NSString gh_isEmpty:string]) {
         return nil;
     }
@@ -22,7 +22,7 @@
     return base64String;
 }
 
-+ (NSString *)decode:(NSString *)base64String {
++ (NSString *)gh_decode:(NSString *)base64String {
     if ([NSString gh_isEmpty:base64String]) {
         return nil;
     }

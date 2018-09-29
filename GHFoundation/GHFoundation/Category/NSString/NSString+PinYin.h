@@ -11,9 +11,9 @@
 @interface NSString (PinYin)
 
 /// 每个汉字的拼音连在一起
-- (NSString *)pinyin;
+- (NSString *)gh_pinyin;
 
 /// 每个汉字的拼音间隔开
-- (NSString *)pinyinSpace;
+- (NSString *)gh_pinyinSpace;
 
 @end

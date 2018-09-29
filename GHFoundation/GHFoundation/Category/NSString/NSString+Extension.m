@@ -78,7 +78,7 @@
     return [predicate evaluateWithObject:self];
 }
 
-- (NSDictionary *)toDictionary {
+- (NSDictionary *)gh_toDictionary {
     NSError *error;
     NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
@@ -88,7 +88,7 @@
     return dict;
 }
 
-+ (NSString *)jsonStringWithDictionary:(NSDictionary *)dict {
++ (NSString *)gh_jsonStringWithDictionary:(NSDictionary *)dict {
     if (!dict) {
         return nil;
     }
@@ -104,7 +104,7 @@
     return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
-+ (NSString *)removeInvalidZeroWithFloat:(CGFloat)floatValue {
++ (NSString *)gh_removeInvalidZeroWithFloat:(CGFloat)floatValue {
     NSString *floatString = [NSString stringWithFormat:@"%f",floatValue];
     const char *floatChar = [floatString UTF8String];
     NSUInteger length = 0;
@@ -128,7 +128,7 @@
     return returnString;
 }
 
-+ (NSString *)separatorBankCardNO:(NSString *)bankCardNO {
++ (NSString *)gh_separatorBankCardNO:(NSString *)bankCardNO {
     NSString *tempText = [bankCardNO stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     NSString *returnText = @"";

@@ -36,15 +36,15 @@
 - (BOOL)gh_isChinese;
 
 /// json字符串转字典
-- (NSDictionary *)toDictionary;
+- (NSDictionary *)gh_toDictionary;
 
 /// 字典转json字符串
-+ (NSString *)jsonStringWithDictionary:(NSDictionary *)dict;
++ (NSString *)gh_jsonStringWithDictionary:(NSDictionary *)dict;
 
 /// 移除浮点数中无效的零
-+ (NSString *)removeInvalidZeroWithFloat:(CGFloat)floatValue;
++ (NSString *)gh_removeInvalidZeroWithFloat:(CGFloat)floatValue;
 
 /// 银行卡号显示格式化,显示后4位数字, 其他用*占位
-+ (NSString *)separatorBankCardNO:(NSString *)bankCardNO;
++ (NSString *)gh_separatorBankCardNO:(NSString *)bankCardNO;
 
 @end

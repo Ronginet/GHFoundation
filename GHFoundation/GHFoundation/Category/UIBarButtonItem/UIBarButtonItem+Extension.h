@@ -10,12 +10,12 @@
 
 @interface UIBarButtonItem (Extension)
 
-+ (UIBarButtonItem *)barButtonWithTitle:(NSString *)title target:(id)target action:(SEL)action;
-+ (UIBarButtonItem *)barButtonWithImage:(NSString *)imgName target:(id)target action:(SEL)action;
++ (UIBarButtonItem *)gh_barButtonWithTitle:(NSString *)title target:(id)target action:(SEL)action;
++ (UIBarButtonItem *)gh_barButtonWithImage:(NSString *)imgName target:(id)target action:(SEL)action;
 
-- (void)updateBarButtonTitleColor:(UIColor *)color;
-- (void)updateBarButtonImage:(UIImage *)image;
+- (void)gh_updateBarButtonTitleColor:(UIColor *)color;
+- (void)gh_updateBarButtonImage:(UIImage *)image;
 
-- (__kindof UIButton *)customButton;
+- (__kindof UIButton *)gh_customButton;
 
 @end
