@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B2F0202DB87B009BF409 /* NSString+File.m */; };
 		E402B36C202DBB11009BF409 /* GHFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B36B202DBB11009BF409 /* GHFoundationTests.m */; };
+		E40783D22160AA5C00C9B1CC /* GHProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E40783D12160AA5C00C9B1CC /* GHProgressView.m */; };
 		E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */; };
 		E425B41120A5351700A68D68 /* GHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E425B41020A5351600A68D68 /* GHTextView.m */; };
 		E432114D2102225C00471EC5 /* GHAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E432114C2102225C00471EC5 /* GHAppInfo.m */; };
@@ -52,6 +53,8 @@
 		E402B369202DBB11009BF409 /* GHFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E402B36B202DBB11009BF409 /* GHFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHFoundationTests.m; sourceTree = "<group>"; };
 		E402B36D202DBB11009BF409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E40783D02160AA5C00C9B1CC /* GHProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHProgressView.h; sourceTree = "<group>"; };
+		E40783D12160AA5C00C9B1CC /* GHProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHProgressView.m; sourceTree = "<group>"; };
 		E42120C62018DE0500CE9BA2 /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
 		E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
 		E425B40F20A5351600A68D68 /* GHTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHTextView.h; sourceTree = "<group>"; };
@@ -133,6 +136,15 @@
 			path = GHFoundationTests;
 			sourceTree = "<group>";
 		};
+		E40783CF2160AA3B00C9B1CC /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				E40783D02160AA5C00C9B1CC /* GHProgressView.h */,
+				E40783D12160AA5C00C9B1CC /* GHProgressView.m */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
 		E42120C52018DDF100CE9BA2 /* UIDevice */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +166,7 @@
 		E425B40D20A534FB00A68D68 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E40783CF2160AA3B00C9B1CC /* ProgressView */,
 				E4BEDC2920E471CF00F6F98E /* CopyLabel */,
 				E425B40E20A534FB00A68D68 /* TextView */,
 			);
@@ -483,6 +496,7 @@
 				E433B82D215E2142002CACF9 /* UIViewController+Extension.m in Sources */,
 				E4E4C82420A5152D00D42410 /* NSString+Base64.m in Sources */,
 				E4B655F820C6DBFC006B6F56 /* UIBarButtonItem+Extension.m in Sources */,
+				E40783D22160AA5C00C9B1CC /* GHProgressView.m in Sources */,
 				E47A709320220E5100E1EB5D /* UIColor+Extension.m in Sources */,
 				E4EF8A261FB89EDC00D8BEB0 /* UIView+Extension.m in Sources */,
 				E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */,

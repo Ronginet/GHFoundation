@@ -33,6 +33,7 @@
 // View
 #import "GHTextView.h"
 #import "GHCopyLabel.h"
+#import "GHProgressView.h"
 
 // Utility
 #import "GHAppInfo.h"
