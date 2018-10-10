@@ -10,7 +10,7 @@
 
 @interface GHTextView : UITextView
 
-@property (nonatomic, copy) NSString *placeholder;
-@property (nonatomic, strong) UIColor *placeholderColor;
+@property (nonatomic, copy) NSString *placeholder;  // Default is nil;
+@property (nonatomic, strong) UIColor *placeholderColor;  // Default is [UIColor lightGrayColor]
 
 @end
