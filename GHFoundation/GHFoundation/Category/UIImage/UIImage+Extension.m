@@ -109,4 +109,29 @@
     return [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
 }
 
++ (UIImage *)gh_imageClipWithImage:(UIImage *)image borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor {
+    CGFloat imageW = image.size.width + 2 * borderWidth;
+    CGFloat imageH = image.size.height + 2 * borderWidth;
+    CGFloat circleWH = MIN(imageW, imageH);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(circleWH, circleWH), NO, [UIScreen mainScreen].scale);
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, circleWH, circleWH)];
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextAddPath(ctx, path.CGPath);
+    if (borderWidth > 0.0) {
+        [borderColor setStroke];
+    }
+    CGContextStrokePath(ctx);  // 渲染
+    
+    // 裁剪区域
+    CGRect clipR = CGRectMake(borderWidth, borderWidth, image.size.width, image.size.height);
+    UIBezierPath *clipPath = [UIBezierPath bezierPathWithOvalInRect:clipR];
+    [clipPath addClip];
+    
+    [image drawAtPoint:CGPointMake(borderWidth, borderWidth)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 @end

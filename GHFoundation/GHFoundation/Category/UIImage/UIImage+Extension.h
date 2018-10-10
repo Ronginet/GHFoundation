@@ -20,4 +20,7 @@
 
 + (UIImage *)gh_stretchedImageWithName:(NSString *)name;
 
+/// 圆形图片裁剪
++ (UIImage *)gh_imageClipWithImage:(UIImage *)image borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+
 @end
