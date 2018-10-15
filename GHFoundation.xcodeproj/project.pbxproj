@@ -10,6 +10,8 @@
 		E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B2F0202DB87B009BF409 /* NSString+File.m */; };
 		E402B36C202DBB11009BF409 /* GHFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B36B202DBB11009BF409 /* GHFoundationTests.m */; };
 		E40783D22160AA5C00C9B1CC /* GHProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E40783D12160AA5C00C9B1CC /* GHProgressView.m */; };
+		E40B923921747C2C00F95FC0 /* GHObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E40B923721747C2C00F95FC0 /* GHObserver.m */; };
+		E40B923C21747C4300F95FC0 /* GHBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E40B923B21747C4300F95FC0 /* GHBaseManager.m */; };
 		E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */; };
 		E425B41120A5351700A68D68 /* GHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E425B41020A5351600A68D68 /* GHTextView.m */; };
 		E432114D2102225C00471EC5 /* GHAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E432114C2102225C00471EC5 /* GHAppInfo.m */; };
@@ -55,6 +57,10 @@
 		E402B36D202DBB11009BF409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E40783D02160AA5C00C9B1CC /* GHProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHProgressView.h; sourceTree = "<group>"; };
 		E40783D12160AA5C00C9B1CC /* GHProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHProgressView.m; sourceTree = "<group>"; };
+		E40B923721747C2C00F95FC0 /* GHObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHObserver.m; sourceTree = "<group>"; };
+		E40B923821747C2C00F95FC0 /* GHObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHObserver.h; sourceTree = "<group>"; };
+		E40B923A21747C4300F95FC0 /* GHBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHBaseManager.h; sourceTree = "<group>"; };
+		E40B923B21747C4300F95FC0 /* GHBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHBaseManager.m; sourceTree = "<group>"; };
 		E42120C62018DE0500CE9BA2 /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
 		E42120C72018DE0500CE9BA2 /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
 		E425B40F20A5351600A68D68 /* GHTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHTextView.h; sourceTree = "<group>"; };
@@ -143,6 +149,25 @@
 				E40783D12160AA5C00C9B1CC /* GHProgressView.m */,
 			);
 			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		E40B923221747B7E00F95FC0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E40B923321747BD500F95FC0 /* BaseManager */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E40B923321747BD500F95FC0 /* BaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				E40B923821747C2C00F95FC0 /* GHObserver.h */,
+				E40B923721747C2C00F95FC0 /* GHObserver.m */,
+				E40B923A21747C4300F95FC0 /* GHBaseManager.h */,
+				E40B923B21747C4300F95FC0 /* GHBaseManager.m */,
+			);
+			path = BaseManager;
 			sourceTree = "<group>";
 		};
 		E42120C52018DDF100CE9BA2 /* UIDevice */ = {
@@ -246,6 +271,7 @@
 				E47A709420220EFB00E1EB5D /* GHFoundation.h */,
 				E4644C7C202DBF55006E0E80 /* BaseConfig */,
 				E49B00491F87B45C0080035A /* Category */,
+				E40B923221747B7E00F95FC0 /* Components */,
 				E425B40D20A534FB00A68D68 /* View */,
 				E4644C7F202DD80F006E0E80 /* Utility */,
 			);
@@ -491,9 +517,11 @@
 				E4BEDC2C20E471D900F6F98E /* GHCopyLabel.m in Sources */,
 				E4DC6A13215F4F9C00F4DE29 /* NSAttributedString+Extension.m in Sources */,
 				E432114D2102225C00471EC5 /* GHAppInfo.m in Sources */,
+				E40B923921747C2C00F95FC0 /* GHObserver.m in Sources */,
 				E49BFFFE1F877BC20080035A /* main.m in Sources */,
 				E4644C82202DD834006E0E80 /* AudioPlay.m in Sources */,
 				E433B82D215E2142002CACF9 /* UIViewController+Extension.m in Sources */,
+				E40B923C21747C4300F95FC0 /* GHBaseManager.m in Sources */,
 				E4E4C82420A5152D00D42410 /* NSString+Base64.m in Sources */,
 				E4B655F820C6DBFC006B6F56 /* UIBarButtonItem+Extension.m in Sources */,
 				E40783D22160AA5C00C9B1CC /* GHProgressView.m in Sources */,

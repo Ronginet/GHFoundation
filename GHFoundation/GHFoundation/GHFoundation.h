@@ -30,6 +30,9 @@
 #import "UIBarButtonItem+Extension.h"
 #import "UIViewController+Extension.h"
 
+// Component
+#import "GHBaseManager.h"
+
 // View
 #import "GHTextView.h"
 #import "GHCopyLabel.h"
