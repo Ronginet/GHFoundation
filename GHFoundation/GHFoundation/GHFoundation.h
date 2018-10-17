@@ -29,6 +29,7 @@
 #import "UIImage+Extension.h"
 #import "UIBarButtonItem+Extension.h"
 #import "UIViewController+Extension.h"
+#import "UIBezierPath+Extension.h"
 
 // Component
 #import "GHBaseManager.h"
