@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B2F0202DB87B009BF409 /* NSString+File.m */; };
 		E402B36C202DBB11009BF409 /* GHFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B36B202DBB11009BF409 /* GHFoundationTests.m */; };
+		E4066CD8217988E70071AE07 /* GHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4066CD7217988E70071AE07 /* GHModel.m */; };
 		E40783D22160AA5C00C9B1CC /* GHProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E40783D12160AA5C00C9B1CC /* GHProgressView.m */; };
 		E40B923921747C2C00F95FC0 /* GHObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E40B923721747C2C00F95FC0 /* GHObserver.m */; };
 		E40B923C21747C4300F95FC0 /* GHBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E40B923B21747C4300F95FC0 /* GHBaseManager.m */; };
@@ -56,6 +57,8 @@
 		E402B369202DBB11009BF409 /* GHFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E402B36B202DBB11009BF409 /* GHFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHFoundationTests.m; sourceTree = "<group>"; };
 		E402B36D202DBB11009BF409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4066CD6217988E70071AE07 /* GHModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHModel.h; sourceTree = "<group>"; };
+		E4066CD7217988E70071AE07 /* GHModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHModel.m; sourceTree = "<group>"; };
 		E40783D02160AA5C00C9B1CC /* GHProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHProgressView.h; sourceTree = "<group>"; };
 		E40783D12160AA5C00C9B1CC /* GHProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHProgressView.m; sourceTree = "<group>"; };
 		E40B923721747C2C00F95FC0 /* GHObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHObserver.m; sourceTree = "<group>"; };
@@ -145,6 +148,15 @@
 			path = GHFoundationTests;
 			sourceTree = "<group>";
 		};
+		E4066CD5217988D40071AE07 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4066CD6217988E70071AE07 /* GHModel.h */,
+				E4066CD7217988E70071AE07 /* GHModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
 		E40783CF2160AA3B00C9B1CC /* ProgressView */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +169,7 @@
 		E40B923221747B7E00F95FC0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E4066CD5217988D40071AE07 /* BaseModel */,
 				E40B923321747BD500F95FC0 /* BaseManager */,
 			);
 			path = Components;
@@ -521,6 +534,7 @@
 				E4F68EFF1F92481F00CD49D0 /* NSString+Extension.m in Sources */,
 				E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */,
 				E45CC021210DCD6400CB6448 /* NSString+PinYin.m in Sources */,
+				E4066CD8217988E70071AE07 /* GHModel.m in Sources */,
 				E4EF8A231FB89C4C00D8BEB0 /* UIImage+Extension.m in Sources */,
 				E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */,
 				E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */,

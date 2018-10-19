@@ -33,6 +33,7 @@
 
 // Component
 #import "GHBaseManager.h"
+#import "GHModel.h"
 
 // View
 #import "GHTextView.h"
