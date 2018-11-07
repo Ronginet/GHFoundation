@@ -7,11 +7,25 @@
 //
 
 #import "GHDeviceInfo.h"
+#import <SystemConfiguration/CaptiveNetwork.h>
 
 @implementation GHDeviceInfo
 
 + (NSString *)UUID {
     return [UIDevice currentDevice].identifierForVendor.UUIDString;
+}
+
++ (NSString *)currentWifiName {
+    NSString *wifiName = nil;
+    CFArrayRef array = CNCopySupportedInterfaces();
+    if (array) {
+        CFDictionaryRef cfDict = CNCopyCurrentNetworkInfo(CFArrayGetValueAtIndex(array, 0));
+        if (cfDict) {
+            NSDictionary *dict = CFBridgingRelease(cfDict);
+            wifiName = [dict valueForKey:@"SSID"];
+        }
+    }
+    return wifiName;
 }
 
 @end

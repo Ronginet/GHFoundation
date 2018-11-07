@@ -12,4 +12,6 @@
 
 + (NSString *)UUID;
 
++ (NSString *)currentWifiName;
+
 @end
