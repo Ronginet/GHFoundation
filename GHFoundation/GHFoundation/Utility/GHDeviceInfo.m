@@ -22,7 +22,7 @@
         CFDictionaryRef cfDict = CNCopyCurrentNetworkInfo(CFArrayGetValueAtIndex(array, 0));
         if (cfDict) {
             NSDictionary *dict = CFBridgingRelease(cfDict);
-            wifiName = [dict valueForKey:@"SSID"];
+            wifiName = [dict valueForKey:(__bridge NSString *)kCNNetworkInfoKeySSID];
         }
     }
     return wifiName;
