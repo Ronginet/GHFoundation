@@ -25,6 +25,7 @@
 
 #import "UIView+Frame.h"
 #import "UIView+Extension.h"
+#import "UIView+FirstResponder.h"
 #import "UIColor+Extension.h"
 #import "UIDevice+Extension.h"
 #import "UIImage+Extension.h"

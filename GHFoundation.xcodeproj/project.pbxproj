@@ -31,6 +31,7 @@
 		E49BFFF31F877BC20080035A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFF21F877BC20080035A /* ViewController.m */; };
 		E49BFFF81F877BC20080035A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49BFFF71F877BC20080035A /* Assets.xcassets */; };
 		E49BFFFE1F877BC20080035A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E49BFFFD1F877BC20080035A /* main.m */; };
+		E4ABBF6A2199C7DB002F1F2F /* UIView+FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ABBF692199C7DB002F1F2F /* UIView+FirstResponder.m */; };
 		E4B655F820C6DBFC006B6F56 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B655F720C6DBFC006B6F56 /* UIBarButtonItem+Extension.m */; };
 		E4BEDC2C20E471D900F6F98E /* GHCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BEDC2B20E471D900F6F98E /* GHCopyLabel.m */; };
 		E4DC6A13215F4F9C00F4DE29 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DC6A12215F4F9C00F4DE29 /* NSAttributedString+Extension.m */; };
@@ -106,6 +107,8 @@
 		E49BFFF71F877BC20080035A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E49BFFFC1F877BC20080035A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49BFFFD1F877BC20080035A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4ABBF682199C7DB002F1F2F /* UIView+FirstResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+FirstResponder.h"; sourceTree = "<group>"; };
+		E4ABBF692199C7DB002F1F2F /* UIView+FirstResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+FirstResponder.m"; sourceTree = "<group>"; };
 		E4B655F620C6DBFC006B6F56 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		E4B655F720C6DBFC006B6F56 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		E4BEDC2A20E471D900F6F98E /* GHCopyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHCopyLabel.h; sourceTree = "<group>"; };
@@ -333,6 +336,8 @@
 				E49B004D1F87B67A0080035A /* UIView+Frame.m */,
 				E4EF8A241FB89EDC00D8BEB0 /* UIView+Extension.h */,
 				E4EF8A251FB89EDC00D8BEB0 /* UIView+Extension.m */,
+				E4ABBF682199C7DB002F1F2F /* UIView+FirstResponder.h */,
+				E4ABBF692199C7DB002F1F2F /* UIView+FirstResponder.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				E408942E21830DAC00C7C3CB /* NSString+MD5.m in Sources */,
 				E40783D22160AA5C00C9B1CC /* GHProgressView.m in Sources */,
 				E47A709320220E5100E1EB5D /* UIColor+Extension.m in Sources */,
+				E4ABBF6A2199C7DB002F1F2F /* UIView+FirstResponder.m in Sources */,
 				E4EF8A261FB89EDC00D8BEB0 /* UIView+Extension.m in Sources */,
 				E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */,
 				E4612924217702840023DEA8 /* UIBezierPath+Extension.m in Sources */,
