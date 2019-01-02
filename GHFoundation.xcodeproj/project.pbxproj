@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E402B2F1202DB87B009BF409 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B2F0202DB87B009BF409 /* NSString+File.m */; };
 		E402B36C202DBB11009BF409 /* GHFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E402B36B202DBB11009BF409 /* GHFoundationTests.m */; };
+		E403024321DC648F0000465D /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = E403024221DC648F0000465D /* NSObject+Swizzling.m */; };
 		E4066CD8217988E70071AE07 /* GHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4066CD7217988E70071AE07 /* GHModel.m */; };
 		E40783D22160AA5C00C9B1CC /* GHProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E40783D12160AA5C00C9B1CC /* GHProgressView.m */; };
 		E408942E21830DAC00C7C3CB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E408942D21830DAC00C7C3CB /* NSString+MD5.m */; };
@@ -59,6 +60,8 @@
 		E402B369202DBB11009BF409 /* GHFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E402B36B202DBB11009BF409 /* GHFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHFoundationTests.m; sourceTree = "<group>"; };
 		E402B36D202DBB11009BF409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E403024121DC648F0000465D /* NSObject+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
+		E403024221DC648F0000465D /* NSObject+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
 		E4066CD6217988E70071AE07 /* GHModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHModel.h; sourceTree = "<group>"; };
 		E4066CD7217988E70071AE07 /* GHModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHModel.m; sourceTree = "<group>"; };
 		E40783D02160AA5C00C9B1CC /* GHProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHProgressView.h; sourceTree = "<group>"; };
@@ -152,6 +155,15 @@
 				E402B36D202DBB11009BF409 /* Info.plist */,
 			);
 			path = GHFoundationTests;
+			sourceTree = "<group>";
+		};
+		E403024021DC64010000465D /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				E403024121DC648F0000465D /* NSObject+Swizzling.h */,
+				E403024221DC648F0000465D /* NSObject+Swizzling.m */,
+			);
+			path = NSObject;
 			sourceTree = "<group>";
 		};
 		E4066CD5217988D40071AE07 /* BaseModel */ = {
@@ -312,6 +324,7 @@
 		E49B00491F87B45C0080035A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E403024021DC64010000465D /* NSObject */,
 				E4DC6A10215F4F6F00F4DE29 /* NSAttributedString */,
 				E47A709020220E3B00E1EB5D /* UIColor */,
 				E42120C92018DEDB00CE9BA2 /* NSData */,
@@ -559,6 +572,7 @@
 				E4644C82202DD834006E0E80 /* AudioPlay.m in Sources */,
 				E433B82D215E2142002CACF9 /* UIViewController+Extension.m in Sources */,
 				E40B923C21747C4300F95FC0 /* GHBaseManager.m in Sources */,
+				E403024321DC648F0000465D /* NSObject+Swizzling.m in Sources */,
 				E4E4C82420A5152D00D42410 /* NSString+Base64.m in Sources */,
 				E4B655F820C6DBFC006B6F56 /* UIBarButtonItem+Extension.m in Sources */,
 				E408942E21830DAC00C7C3CB /* NSString+MD5.m in Sources */,
