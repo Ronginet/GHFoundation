@@ -10,6 +10,13 @@
 
 @interface NSDate (Extension)
 
+- (BOOL)isToday;
+- (BOOL)isYesterday;
+- (BOOL)isTomorrow;
+- (BOOL)isThisYear;  // 是否为今年
+- (BOOL)isThisMonth;
+- (BOOL)isThisWeek;
+
 - (NSString *)timeIntervalDescription;//距离当前的时间间隔描述
 - (NSString *)minuteDescription;/*精确到分钟的日期描述*/
 - (NSString *)formattedTime;
@@ -29,9 +36,6 @@
 
 // Comparing dates
 - (BOOL) isEqualToDateIgnoringTime: (NSDate *) aDate;
-- (BOOL) isToday;
-- (BOOL) isTomorrow;
-- (BOOL) isYesterday;
 - (BOOL) isSameWeekAsDate: (NSDate *) aDate;
 - (BOOL) isThisWeek;
 - (BOOL) isNextWeek;
@@ -39,7 +43,6 @@
 - (BOOL) isSameMonthAsDate: (NSDate *) aDate;
 - (BOOL) isThisMonth;
 - (BOOL) isSameYearAsDate: (NSDate *) aDate;
-- (BOOL) isThisYear;
 - (BOOL) isNextYear;
 - (BOOL) isLastYear;
 - (BOOL) isEarlierThanDate: (NSDate *) aDate;

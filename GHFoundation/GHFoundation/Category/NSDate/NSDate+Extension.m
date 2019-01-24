@@ -25,6 +25,90 @@ NSUInteger const gh_yearForSecond = 31556926;
 
 @implementation NSDate (Extension)
 
+- (BOOL)isToday {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear;
+    
+    // 获取当前时间年月日
+    NSDateComponents *nowcmps = [calendar components:unit fromDate:[NSDate date]];
+    // 获取self的年月日
+    NSDateComponents *selfcmps = [calendar components:unit fromDate:self];
+    BOOL flag = (selfcmps.year == nowcmps.year) && (selfcmps.month == nowcmps.month) && (selfcmps.day == nowcmps.day);
+    return flag;
+}
+
+- (BOOL)isYesterday {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear;
+    // 获取当前时间年月日
+    NSDateComponents *nowcmps = [calendar components:unit fromDate:[NSDate date]];
+    // 获取self的年月日
+    NSDateComponents *selfcmps = [calendar components:unit fromDate:self];
+    BOOL flag = (selfcmps.year == nowcmps.year) && (selfcmps.month == nowcmps.month) && (selfcmps.day == nowcmps.day - 1);
+    return flag;
+}
+
+- (BOOL)isTomorrow {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear;
+    NSDateComponents *nowcmps = [calendar components:unit fromDate:[NSDate date]];
+    NSDateComponents *selfcmps = [calendar components:unit fromDate:self];
+    BOOL flag = (selfcmps.year == nowcmps.year) && (selfcmps.month == nowcmps.month) && (selfcmps.day == nowcmps.day + 1);
+    return flag;
+}
+
+- (BOOL)isThisYear {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *nowCmps = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
+    NSDateComponents *selfCmps = [calendar components:NSCalendarUnitYear fromDate:self];
+    return nowCmps.year == selfCmps.year;
+}
+
+- (BOOL)isThisMonth {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth;
+    NSDateComponents *nowCmps = [calendar components:unit fromDate:[NSDate date]];
+    NSDateComponents *selfCmps = [calendar components:unit fromDate:self];
+    return (nowCmps.year == selfCmps.year) && (nowCmps.month == selfCmps.month);
+}
+
+- (BOOL)isThisWeek {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitWeekday;
+    NSDateComponents *nowCmps = [calendar components:unit fromDate:[NSDate date]];
+    NSDateComponents *selfCmps = [calendar components:unit fromDate:self];
+    
+    NSDateComponents *dateCmps = [calendar components:unit fromDate:[NSDate date] toDate:self options:0];
+    NSInteger year = labs(dateCmps.year);
+    NSInteger month = labs(dateCmps.month);
+    NSInteger day = labs(dateCmps.day);  // 取绝对值
+    
+    if (year == 0 && month == 0) {  // 时间差不超过一年(跨年)或一个月(跨月)
+        if (day > 6) {  // 不在同一周
+            return NO;
+        } else {
+            if (dateCmps.date >= 0 && dateCmps.hour >= 0 && dateCmps.minute >= 0) {
+                // 中国以周一为一周开始, 西方以周日为一周开始
+                NSInteger ChinaWeekDay = selfCmps.weekday == 1 ? 7 : selfCmps.weekday - 1;
+                if (day >= ChinaWeekDay) {
+                    return NO;
+                } else {
+                    return YES;
+                }
+            } else {  // 比较时间小于当前时间
+                NSInteger ChinaWeekDay = selfCmps.weekday == 1 ? 7 : nowCmps.weekday - 1;
+                if (day >= ChinaWeekDay) {
+                    return NO;
+                } else {
+                    return YES;
+                }
+            }
+        }
+    } else {
+        return NO;
+    }
+}
+
 /*距离当前的时间间隔描述*/
 - (NSString *)timeIntervalDescription
 {
@@ -230,21 +314,6 @@ NSUInteger const gh_yearForSecond = 31556926;
             (components1.day == components2.day));
 }
 
-- (BOOL) isToday
-{
-    return [self isEqualToDateIgnoringTime:[NSDate date]];
-}
-
-- (BOOL) isTomorrow
-{
-    return [self isEqualToDateIgnoringTime:[NSDate dateTomorrow]];
-}
-
-- (BOOL) isYesterday
-{
-    return [self isEqualToDateIgnoringTime:[NSDate dateYesterday]];
-}
-
 // This hard codes the assumption that a week is 7 days
 - (BOOL)isSameWeekAsDate: (NSDate *)aDate
 {
@@ -256,11 +325,6 @@ NSUInteger const gh_yearForSecond = 31556926;
     
     // Must have a time interval under 1 week. Thanks @aclark
     return (fabs([self timeIntervalSinceDate:aDate]) < gh_weekForSecond);
-}
-
-- (BOOL) isThisWeek
-{
-    return [self isSameWeekAsDate:[NSDate date]];
 }
 
 - (BOOL) isNextWeek
@@ -286,22 +350,11 @@ NSUInteger const gh_yearForSecond = 31556926;
             (components1.year == components2.year));
 }
 
-- (BOOL) isThisMonth
-{
-    return [self isSameMonthAsDate:[NSDate date]];
-}
-
 - (BOOL) isSameYearAsDate: (NSDate *) aDate
 {
     NSDateComponents *components1 = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:self];
     NSDateComponents *components2 = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:aDate];
     return (components1.year == components2.year);
-}
-
-- (BOOL) isThisYear
-{
-    // Thanks, baspellis
-    return [self isSameYearAsDate:[NSDate date]];
 }
 
 - (BOOL) isNextYear
