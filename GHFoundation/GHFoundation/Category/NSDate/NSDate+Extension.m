@@ -109,6 +109,13 @@ NSUInteger const gh_yearForSecond = 31556926;
     }
 }
 
+- (NSDateComponents *)deltaWithNowDate {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    NSDateComponents *com = [calendar components:unit fromDate:[NSDate date] toDate:self options:0];
+    return com;
+}
+
 /*距离当前的时间间隔描述*/
 - (NSString *)timeIntervalDescription
 {

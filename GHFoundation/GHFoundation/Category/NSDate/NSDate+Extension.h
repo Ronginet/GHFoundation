@@ -17,6 +17,8 @@
 - (BOOL)isThisMonth;
 - (BOOL)isThisWeek;
 
+- (NSDateComponents *)deltaWithNowDate;  // 与当前时间差距
+
 - (NSString *)timeIntervalDescription;//距离当前的时间间隔描述
 - (NSString *)minuteDescription;/*精确到分钟的日期描述*/
 - (NSString *)formattedTime;
