@@ -15,4 +15,6 @@
 
 + (NSString *)appDisplayName;
 
++ (NSString *)appBuildVersion;
+
 @end
