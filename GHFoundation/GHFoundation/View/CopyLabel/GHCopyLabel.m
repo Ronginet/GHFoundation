@@ -14,6 +14,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.userInteractionEnabled = YES;
+        self.copyEnable = YES;
         [self addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGR)]];
     }
     return self;
@@ -26,6 +27,10 @@
 #pragma mark - Private
 
 - (void)longPressGR {
+    if (!self.copyEnable) {
+        return;
+    }
+    
     [self becomeFirstResponder];
     
     UIMenuController *menuVC = [UIMenuController sharedMenuController];

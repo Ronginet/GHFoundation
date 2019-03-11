@@ -10,4 +10,6 @@
 
 @interface GHCopyLabel : UILabel
 
+@property (nonatomic, assign) BOOL copyEnable;  // Default is YES;
+
 @end
