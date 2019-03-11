@@ -15,7 +15,7 @@
     if (self) {
         self.userInteractionEnabled = YES;
         self.copyEnable = YES;
-        [self addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGR)]];
+        [self addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGR:)]];
     }
     return self;
 }
@@ -26,18 +26,20 @@
 
 #pragma mark - Private
 
-- (void)longPressGR {
+- (void)longPressGR:(UITapGestureRecognizer *)tap {
     if (!self.copyEnable) {
         return;
     }
     
-    [self becomeFirstResponder];
-    
-    UIMenuController *menuVC = [UIMenuController sharedMenuController];
-    UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:@"复制" action:@selector(copyText)];
-    menuVC.menuItems = @[item];
-    [menuVC setTargetRect:self.bounds inView:self];
-    [menuVC setMenuVisible:YES animated:YES];
+    if (tap.state == UIGestureRecognizerStateBegan) {
+        [self becomeFirstResponder];
+        
+        UIMenuController *menuVC = [UIMenuController sharedMenuController];
+        UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:@"复制" action:@selector(copyText)];
+        menuVC.menuItems = @[item];
+        [menuVC setTargetRect:self.bounds inView:self];
+        [menuVC setMenuVisible:YES animated:YES];
+    }
 }
 
 - (void)copyText {
