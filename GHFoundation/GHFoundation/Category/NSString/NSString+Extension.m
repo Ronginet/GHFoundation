@@ -8,8 +8,8 @@
 
 #import "NSString+Extension.h"
 
-#define MobileRegex (@"^((13[0-9])|(15[^4\\D])|(18[0,2,3,5-9]|(17[0-9])))\\d{8}$")
-#define PhoneRegex (@"\\+?\\d{1,4}?[-.\\s]?\\(?\\d{1,3}?\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,4}[-.\\s]?\\d{3,9}")
+#define MobileNumberRegex (@"^((13[0-9])|(15[^4\\D])|(18[0,2,3,5-9]|(17[0-9])))\\d{8}$")
+#define PhoneNumberRegex (@"\\+?\\d{1,4}?[-.\\s]?\\(?\\d{1,3}?\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,4}[-.\\s]?\\d{3,9}")
 #define MailRegex (@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
 #define URLRegex (@"(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]")
 
@@ -24,7 +24,12 @@
     // 移动: 134,135,136,137,138,139,150,151,157,158,159,187,188
     // 联通: 130,131,132,152,155,156,185,186
     // 电信: 133,153,180,189
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",MobileRegex];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",MobileNumberRegex];
+    return [predicate evaluateWithObject:self];
+}
+
+- (BOOL)gh_isPhoneNumber {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", PhoneNumberRegex];
     return [predicate evaluateWithObject:self];
 }
 
@@ -81,7 +86,7 @@
 }
 
 - (void)recognizeAllPhoneWithBlock:(void (^)(NSString *, NSRange, BOOL *))block {
-    [self recognizeAllForRegex:PhoneRegex withBlock:block];
+    [self recognizeAllForRegex:PhoneNumberRegex withBlock:block];
 }
 
 - (void)recognizeAllMailWithBlock:(void (^)(NSString *, NSRange, BOOL *))block {

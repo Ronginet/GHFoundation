@@ -16,6 +16,8 @@
 
 /// 判断是否为移动电话
 - (BOOL)gh_isMobileNumber;
+/// 判断是否为电话号码, 含固话
+- (BOOL)gh_isPhoneNumber;
 
 /// 判断是否为邮箱
 - (BOOL)gh_isEmail;
