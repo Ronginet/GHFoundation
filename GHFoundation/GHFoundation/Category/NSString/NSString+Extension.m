@@ -30,6 +30,12 @@
     return [predicate evaluateWithObject:self];
 }
 
+- (BOOL)gh_isURL {
+    NSString *regex = @"(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [predicate evaluateWithObject:self];
+}
+
 - (BOOL)gh_isIdentityCard {
     if (self.length <= 0) {
         return NO;

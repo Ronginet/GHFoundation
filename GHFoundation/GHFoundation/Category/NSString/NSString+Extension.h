@@ -20,6 +20,9 @@
 /// 判断是否为邮箱
 - (BOOL)gh_isEmail;
 
+/// 判断是否为URL
+- (BOOL)gh_isURL;
+
 /// 身份证号码验证
 - (BOOL)gh_isIdentityCard;
 
