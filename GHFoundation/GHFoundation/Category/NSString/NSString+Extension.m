@@ -80,6 +80,31 @@
     return arrM.copy;
 }
 
+- (void)recognizeAllPhoneWithBlock:(void (^)(NSString *, NSRange, BOOL *))block {
+    [self recognizeAllForRegex:PhoneRegex withBlock:block];
+}
+
+- (void)recognizeAllMailWithBlock:(void (^)(NSString *, NSRange, BOOL *))block {
+    [self recognizeAllForRegex:MailRegex withBlock:block];
+}
+
+- (void)recognizeAllURLWithBlock:(void (^)(NSString *, NSRange, BOOL *))block {
+    [self recognizeAllForRegex:URLRegex withBlock:block];
+}
+
+- (void)recognizeAllForRegex:(NSString *)regex withBlock:(void (^)(NSString *, NSRange, BOOL *))block {
+    NSError *error = nil;
+    NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:regex options:0 error:&error];
+    if (!error) {
+        [regular enumerateMatchesInString:self options:0 range:NSMakeRange(0, self.length) usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
+            if (block) {
+                NSString *resultText = [self substringWithRange:result.range];
+                block(resultText, result.range, stop);
+            }
+        }];
+    }
+}
+
 - (BOOL)gh_isChinese {
     NSString *match=@"(^[\u4e00-\u9fa5]+$)";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];

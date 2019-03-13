@@ -35,6 +35,12 @@
 /// 获取子字符串在父字符串中出现的range
 - (NSArray<NSValue *>*)gh_rangesOfText:(NSString *)text options:(NSStringCompareOptions)mask;
 
+/// 电话, 邮箱和链接等识别
+- (void)recognizeAllPhoneWithBlock:(void (^)(NSString *, NSRange, BOOL *))block;
+- (void)recognizeAllMailWithBlock:(void (^)(NSString *, NSRange, BOOL *))block;
+- (void)recognizeAllURLWithBlock:(void (^)(NSString *, NSRange, BOOL *))block;
+- (void)recognizeAllForRegex:(NSString *)regex withBlock:(void (^)(NSString *, NSRange, BOOL *))block;
+
 /// 是否纯中文
 - (BOOL)gh_isChinese;
 
