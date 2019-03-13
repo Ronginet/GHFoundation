@@ -8,6 +8,11 @@
 
 #import "NSString+Extension.h"
 
+#define MobileRegex (@"^((13[0-9])|(15[^4\\D])|(18[0,2,3,5-9]|(17[0-9])))\\d{8}$")
+#define PhoneRegex (@"\\+?\\d{1,4}?[-.\\s]?\\(?\\d{1,3}?\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,4}[-.\\s]?\\d{3,9}")
+#define MailRegex (@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
+#define URLRegex (@"(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]")
+
 @implementation NSString (Extension)
 
 - (BOOL)gh_isValidateWithRegex:(NSString *)regex {
@@ -19,20 +24,17 @@
     // 移动: 134,135,136,137,138,139,150,151,157,158,159,187,188
     // 联通: 130,131,132,152,155,156,185,186
     // 电信: 133,153,180,189
-    NSString *regex = @"^((13[0-9])|(15[^4\\D])|(18[0,2,3,5-9]|(17[0-9])))\\d{8}$";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",MobileRegex];
     return [predicate evaluateWithObject:self];
 }
 
 - (BOOL)gh_isEmail {
-    NSString *regex = @"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",MailRegex];
     return [predicate evaluateWithObject:self];
 }
 
 - (BOOL)gh_isURL {
-    NSString *regex = @"(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", URLRegex];
     return [predicate evaluateWithObject:self];
 }
 
