@@ -12,43 +12,47 @@
 #define PhoneNumberRegex (@"\\+?\\d{1,4}?[-.\\s]?\\(?\\d{1,3}?\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,4}[-.\\s]?\\d{3,9}")
 #define MailRegex (@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
 #define URLRegex (@"(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]")
+#define IdentityCardRegex (@"^(\\d{14}|\\d{17})(\\d|[xX])$")
+#define ChineseRegex (@"(^[\u4e00-\u9fa5]+$)")
 
 @implementation NSString (Extension)
 
 - (BOOL)gh_isValidateWithRegex:(NSString *)regex {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
-    return [predicate evaluateWithObject:self];
+    return [self isMatchedByRegex:regex];
 }
 
 - (BOOL)gh_isMobileNumber {
     // 移动: 134,135,136,137,138,139,150,151,157,158,159,187,188
     // 联通: 130,131,132,152,155,156,185,186
     // 电信: 133,153,180,189
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",MobileNumberRegex];
-    return [predicate evaluateWithObject:self];
+    return [self isMatchedByRegex:MobileNumberRegex];
 }
 
 - (BOOL)gh_isPhoneNumber {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", PhoneNumberRegex];
-    return [predicate evaluateWithObject:self];
+    return [self isMatchedByRegex:PhoneNumberRegex];
 }
 
 - (BOOL)gh_isEmail {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",MailRegex];
-    return [predicate evaluateWithObject:self];
+    return [self isMatchedByRegex:MailRegex];
 }
 
 - (BOOL)gh_isURL {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", URLRegex];
-    return [predicate evaluateWithObject:self];
+    return [self isMatchedByRegex:URLRegex];
 }
 
 - (BOOL)gh_isIdentityCard {
-    if (self.length <= 0) {
+    return [self isMatchedByRegex:IdentityCardRegex];
+}
+
+- (BOOL)gh_isChinese {
+    return [self isMatchedByRegex:ChineseRegex];
+}
+
+- (BOOL)isMatchedByRegex:(NSString *)regex {
+    if (self.length == 0) {
         return NO;
     }
     
-    NSString *regex = @"^(\\d{14}|\\d{17})(\\d|[xX])$";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [predicate evaluateWithObject:self];
 }
@@ -108,12 +112,6 @@
             }
         }];
     }
-}
-
-- (BOOL)gh_isChinese {
-    NSString *match=@"(^[\u4e00-\u9fa5]+$)";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
-    return [predicate evaluateWithObject:self];
 }
 
 - (NSDictionary *)gh_toDictionary {
