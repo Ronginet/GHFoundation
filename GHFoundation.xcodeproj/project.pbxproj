@@ -25,6 +25,7 @@
 		E4612924217702840023DEA8 /* UIBezierPath+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4612923217702840023DEA8 /* UIBezierPath+Extension.m */; };
 		E4644C82202DD834006E0E80 /* AudioPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E4644C81202DD834006E0E80 /* AudioPlay.m */; };
 		E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E478BDB9200E446000C2358E /* NSDate+Extension.m */; };
+		E4796C502239F6B00038A120 /* GHRecognizeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4796C4F2239F6B00038A120 /* GHRecognizeLabel.m */; };
 		E47A709320220E5100E1EB5D /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E47A709220220E5100E1EB5D /* UIColor+Extension.m */; };
 		E4955F8C202376F700B31FC3 /* NSData+ImageFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = E4955F8B202376F700B31FC3 /* NSData+ImageFormat.m */; };
 		E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E49B004D1F87B67A0080035A /* UIView+Frame.m */; };
@@ -94,6 +95,8 @@
 		E4644C83202DDA94006E0E80 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		E478BDB8200E446000C2358E /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		E478BDB9200E446000C2358E /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		E4796C4E2239F6B00038A120 /* GHRecognizeLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHRecognizeLabel.h; sourceTree = "<group>"; };
+		E4796C4F2239F6B00038A120 /* GHRecognizeLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHRecognizeLabel.m; sourceTree = "<group>"; };
 		E47A709120220E5100E1EB5D /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		E47A709220220E5100E1EB5D /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		E47A709420220EFB00E1EB5D /* GHFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHFoundation.h; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 			children = (
 				E40783CF2160AA3B00C9B1CC /* ProgressView */,
 				E4BEDC2920E471CF00F6F98E /* CopyLabel */,
+				E4796C4D2239F68E0038A120 /* RecognizeLabel */,
 				E425B40E20A534FB00A68D68 /* TextView */,
 			);
 			path = View;
@@ -297,6 +301,15 @@
 				E478BDB9200E446000C2358E /* NSDate+Extension.m */,
 			);
 			path = NSDate;
+			sourceTree = "<group>";
+		};
+		E4796C4D2239F68E0038A120 /* RecognizeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				E4796C4E2239F6B00038A120 /* GHRecognizeLabel.h */,
+				E4796C4F2239F6B00038A120 /* GHRecognizeLabel.m */,
+			);
+			path = RecognizeLabel;
 			sourceTree = "<group>";
 		};
 		E47A709020220E3B00E1EB5D /* UIColor */ = {
@@ -555,6 +568,7 @@
 			files = (
 				E4321150210222E200471EC5 /* GHDeviceInfo.m in Sources */,
 				E4F68EFF1F92481F00CD49D0 /* NSString+Extension.m in Sources */,
+				E4796C502239F6B00038A120 /* GHRecognizeLabel.m in Sources */,
 				E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */,
 				E45CC021210DCD6400CB6448 /* NSString+PinYin.m in Sources */,
 				E4066CD8217988E70071AE07 /* GHModel.m in Sources */,
