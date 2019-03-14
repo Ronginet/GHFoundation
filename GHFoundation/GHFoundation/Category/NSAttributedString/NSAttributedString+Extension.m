@@ -7,6 +7,7 @@
 //
 
 #import "NSAttributedString+Extension.h"
+#import "NSString+Extension.h"
 
 @implementation NSAttributedString (Extension)
 
@@ -35,6 +36,24 @@
     
     NSAttributedString *attr = [NSAttributedString attributedStringWithAttachment:textAttachment];
     [self appendAttributedString:attr];
+}
+
+- (void)recognizePhone:(NSDictionary<NSAttributedStringKey,id> *)attrs {
+    [self.string recognizeAllPhoneWithBlock:^(NSString *phone, NSRange range, BOOL *stop) {
+        [self setAttributes:attrs range:range];
+    }];
+}
+
+- (void)recognizeMail:(NSDictionary<NSAttributedStringKey,id> *)attrs {
+    [self.string recognizeAllMailWithBlock:^(NSString *mail, NSRange range, BOOL *stop) {
+        [self setAttributes:attrs range:range];
+    }];
+}
+
+- (void)recognizeURL:(NSDictionary<NSAttributedStringKey,id> *)attrs {
+    [self.string recognizeAllURLWithBlock:^(NSString *url, NSRange range, BOOL *stop) {
+        [self setAttributes:attrs range:range];
+    }];
 }
 
 @end
