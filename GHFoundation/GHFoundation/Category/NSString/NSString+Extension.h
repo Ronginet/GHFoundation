@@ -38,10 +38,10 @@
 - (NSArray<NSValue *>*)gh_rangesOfText:(NSString *)text options:(NSStringCompareOptions)mask;
 
 /// 电话, 邮箱和链接等识别
-- (void)recognizeAllPhoneWithBlock:(void (^)(NSString *, NSRange, BOOL *))block;
-- (void)recognizeAllMailWithBlock:(void (^)(NSString *, NSRange, BOOL *))block;
-- (void)recognizeAllURLWithBlock:(void (^)(NSString *, NSRange, BOOL *))block;
-- (void)recognizeAllForRegex:(NSString *)regex withBlock:(void (^)(NSString *, NSRange, BOOL *))block;
+- (void)recognizeAllPhoneWithBlock:(void (^)(NSString *phone, NSRange range, BOOL *stop))block;
+- (void)recognizeAllMailWithBlock:(void (^)(NSString *mail, NSRange range, BOOL *stop))block;
+- (void)recognizeAllURLWithBlock:(void (^)(NSString *url, NSRange range, BOOL *stop))block;
+- (void)recognizeAllForRegex:(NSString *)regex withBlock:(void (^)(NSString *result, NSRange range, BOOL *stop))block;
 
 /// 是否纯中文
 - (BOOL)gh_isChinese;
