@@ -29,8 +29,8 @@
     attrs[NSForegroundColorAttributeName] = self.placeholderColor;
     
     // 画文字
-    rect.origin.x = 5;
-    rect.origin.y = 8;
+    rect.origin.x = self.textContainerInset.left + 4;
+    rect.origin.y = self.textContainerInset.top;
     rect.size.width -= 2 * rect.origin.x;
     [self.placeholder drawInRect:rect withAttributes:attrs];
 }
@@ -80,6 +80,12 @@
 
 - (void)setAttributedText:(NSAttributedString *)attributedText {
     [super setAttributedText:attributedText];
+    
+    [self setNeedsDisplay];
+}
+
+- (void)setTextContainerInset:(UIEdgeInsets)textContainerInset {
+    [super setTextContainerInset:textContainerInset];
     
     [self setNeedsDisplay];
 }
