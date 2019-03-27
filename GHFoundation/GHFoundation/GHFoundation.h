@@ -33,6 +33,7 @@
 #import "UIBarButtonItem+Extension.h"
 #import "UIViewController+Extension.h"
 #import "UIBezierPath+Extension.h"
+#import "UIButton+ImageTitleStyle.h"
 
 // Component
 #import "GHBaseManager.h"
