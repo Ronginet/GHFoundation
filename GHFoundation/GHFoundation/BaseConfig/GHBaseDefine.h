@@ -9,8 +9,6 @@
 #ifndef GHBaseDefine_h
 #define GHBaseDefine_h
 
-#import "Singleton.h"
-
 /*
  iPhone 4/4s 宽高: 320 x 480 -- @2x
  iPhone 5/SE 宽高: 320 x 568 -- @2x
@@ -31,15 +29,15 @@
 // 需要横屏或者竖屏，获取屏幕宽度与高度
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 // 当前Xcode支持iOS8及以上
 
-#define Screen_Width    ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.width)
-#define Screen_Height   ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.height)
-#define Screen_Size     ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale):[UIScreen mainScreen].bounds.size)
+#define GHScreenWidth    ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.width)
+#define GHScreenHeight   ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.height)
+#define GHScreenSize     ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale):[UIScreen mainScreen].bounds.size)
 
 #else
 
-#define Screen_Width    [UIScreen mainScreen].bounds.size.width
-#define Screen_Height   [UIScreen mainScreen].bounds.size.height
-#define Screen_Size    [UIScreen mainScreen].bounds.size
+#define GHScreenWidth    [UIScreen mainScreen].bounds.size.width
+#define GHScreenHeight   [UIScreen mainScreen].bounds.size.height
+#define GHScreenSize    [UIScreen mainScreen].bounds.size
 
 #endif
 
@@ -47,23 +45,17 @@
 // RGB颜色/设置RGBA颜色
 #define GHRGBColor(r, g, b)      GHRGBAColor(r, g, b, 1.0)
 #define GHRGBAColor(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
-
 // 随机颜色
 #define GHRandomColor            GHRGBAColor((arc4random_uniform(256) / 255.0), (arc4random_uniform(256) / 255.0), (arc4random_uniform(256) / 255.0), 1.0)
-
 // 十六进制颜色
 #define GHHexColor(hex)          [UIColor colorWithRed:(((hex & 0xFF0000) >> 16) / 255.0) green:(((hex & 0x00FF00) >> 8 ) / 255.0) blue:((hex & 0x0000FF) / 255.0) alpha:1.0]
 
 // Log
 #ifdef DEBUG
-
 #define GHLog(...) NSLog(@"%s (Line = %d) \n\n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
-
 //#define GHLog(format, ...)  printf("[%s] %s [%d line] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String])
 #else
-
 #define GHLog(...)
-
 #endif
 
 // 弱对象/强对象
@@ -92,25 +84,21 @@
 #define GHCurrentLanguage   ([[NSLocale preferredLanguages] objectAtIndex:0])
 
 // 当前系统版本
-#define CurrentSystemVersion   [[[UIDevice currentDevice] systemVersion] floatValue]
+#define GHCurrentSystemVersion   [[[UIDevice currentDevice] systemVersion] floatValue]
 
 // 判断是否为iPhone
-#define IS_iPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-
+#define GH_is_iPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 // 判断是否为iPad
-#define IS_iPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-
+#define GH_is_iPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 // 判断是否为ipod
-#define IS_iPod ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
+#define GH_is_iPod ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
 
 // 判断是否为 iPhone 5/SE
-#define iPhone_5_SE [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 568.0f
-
+#define GH_is_iPhone_5_SE [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 568.0f
 // 判断是否为iPhone 6/6s
-#define iPhone_6_6s [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 667.0f
-
+#define GH_is_iPhone_6_6s [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 667.0f
 // 判断是否为iPhone 6Plus/6sPlus
-#define iPhone6Plus_6Plus [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
+#define GH_is_iPhone6P_6sP [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
 
 
 #if TARGET_OS_IPHONE

@@ -11,6 +11,7 @@
 
 // BaseDefine
 #import "GHBaseDefine.h"
+#import "Singleton.h"
 
 // Category
 #import "NSObject+Swizzling.h"
