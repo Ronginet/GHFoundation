@@ -24,6 +24,7 @@
 #import "NSData+ImageFormat.h"
 #import "NSDate+Extension.h"
 #import "NSAttributedString+Extension.h"
+#import "NSDecimalNumber+Extension.h"
 
 #import "UIView+Frame.h"
 #import "UIView+Extension.h"

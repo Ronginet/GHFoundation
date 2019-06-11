@@ -20,6 +20,7 @@
 		E432114D2102225C00471EC5 /* GHAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E432114C2102225C00471EC5 /* GHAppInfo.m */; };
 		E4321150210222E200471EC5 /* GHDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E432114F210222E200471EC5 /* GHDeviceInfo.m */; };
 		E433B82D215E2142002CACF9 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E433B82C215E2142002CACF9 /* UIViewController+Extension.m */; };
+		E43D170C22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E43D170B22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.m */; };
 		E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */; };
 		E45CC021210DCD6400CB6448 /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = E45CC020210DCD6400CB6448 /* NSString+PinYin.m */; };
 		E4612924217702840023DEA8 /* UIBezierPath+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4612923217702840023DEA8 /* UIBezierPath+Extension.m */; };
@@ -84,6 +85,8 @@
 		E432114F210222E200471EC5 /* GHDeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHDeviceInfo.m; sourceTree = "<group>"; };
 		E433B82B215E2142002CACF9 /* UIViewController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
 		E433B82C215E2142002CACF9 /* UIViewController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		E43D170A22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Extension.h"; sourceTree = "<group>"; };
+		E43D170B22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Extension.m"; sourceTree = "<group>"; };
 		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
 		E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
 		E45CC01F210DCD6400CB6448 /* NSString+PinYin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin.h"; sourceTree = "<group>"; };
@@ -257,6 +260,15 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		E43D170922AF88DF00DD9FC6 /* NSDecimalNumber */ = {
+			isa = PBXGroup;
+			children = (
+				E43D170A22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.h */,
+				E43D170B22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.m */,
+			);
+			path = NSDecimalNumber;
+			sourceTree = "<group>";
+		};
 		E456EC091F93BCC800414F27 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,14 +353,15 @@
 			isa = PBXGroup;
 			children = (
 				E403024021DC64010000465D /* NSObject */,
-				E4DC6A10215F4F6F00F4DE29 /* NSAttributedString */,
-				E47A709020220E3B00E1EB5D /* UIColor */,
 				E42120C92018DEDB00CE9BA2 /* NSData */,
-				E42120C52018DDF100CE9BA2 /* UIDevice */,
 				E478BDB7200E444900C2358E /* NSDate */,
-				E4EF8A201FB89C1200D8BEB0 /* UIImage */,
-				E456EC091F93BCC800414F27 /* NSDictionary */,
 				E4F68EFC1F9247E200CD49D0 /* NSString */,
+				E456EC091F93BCC800414F27 /* NSDictionary */,
+				E4DC6A10215F4F6F00F4DE29 /* NSAttributedString */,
+				E43D170922AF88DF00DD9FC6 /* NSDecimalNumber */,
+				E47A709020220E3B00E1EB5D /* UIColor */,
+				E42120C52018DDF100CE9BA2 /* UIDevice */,
+				E4EF8A201FB89C1200D8BEB0 /* UIImage */,
 				E49B004B1F87B61A0080035A /* UIView */,
 				E4C4013B2248CF01001A141E /* UIButton */,
 				E4B655F520C6DBFC006B6F56 /* UIBarButtonItem */,
@@ -584,6 +597,7 @@
 				E4796C502239F6B00038A120 /* GHRecognizeLabel.m in Sources */,
 				E42120C82018DE0500CE9BA2 /* UIDevice+Extension.m in Sources */,
 				E45CC021210DCD6400CB6448 /* NSString+PinYin.m in Sources */,
+				E43D170C22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.m in Sources */,
 				E4066CD8217988E70071AE07 /* GHModel.m in Sources */,
 				E4EF8A231FB89C4C00D8BEB0 /* UIImage+Extension.m in Sources */,
 				E49B004E1F87B67A0080035A /* UIView+Frame.m in Sources */,
