@@ -14,6 +14,7 @@
 #import "Singleton.h"
 
 // Category
+#import "NSObject+Extension.h"
 #import "NSObject+Swizzling.h"
 #import "NSString+Extension.h"
 #import "NSString+File.h"
