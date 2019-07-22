@@ -16,6 +16,10 @@
 /// 颜色转圆角图片
 + (UIImage *)gh_imageWithColor:(UIColor *)color cornerRadius:(CGFloat)cornerRadius;
 
+/// view转图片
++ (UIImage *)gh_imageWithView:(UIView *)view;
++ (UIImage *)gh_imageWithView:(UIView *)view cornerRadius:(CGFloat)cornerRadius;
+
 + (UIImage *)gh_animatedGIFWithData:(NSData *)data;
 
 + (UIImage *)gh_stretchedImageWithName:(NSString *)name;

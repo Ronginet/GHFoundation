@@ -35,6 +35,25 @@
     return image;
 }
 
++ (UIImage *)gh_imageWithView:(UIView *)view {
+    return [self gh_imageWithView:view cornerRadius:0];
+}
+
++ (UIImage *)gh_imageWithView:(UIView *)view cornerRadius:(CGFloat)cornerRadius {
+    if (!view || CGRectIsEmpty(view.bounds) || CGRectEqualToRect(view.bounds, CGRectZero)) {
+        return nil;
+    }
+    
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, [UIScreen mainScreen].scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    if (cornerRadius == 0.f) {
+        return image;
+    }
+    return [image gh_imageClipWithCornerRadius:cornerRadius];
+}
+
 + (UIImage *)gh_animatedGIFWithData:(NSData *)data {
     if (!data) {
         return nil;
