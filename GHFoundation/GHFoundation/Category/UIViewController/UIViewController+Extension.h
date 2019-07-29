@@ -10,7 +10,6 @@
 
 @interface UIViewController (Extension)
 
-- (void)gh_popToViewController:(NSString *)vcName animated:(BOOL)animated;
 - (void)gh_setupTouchForDismissKeyboard;
 
 @end

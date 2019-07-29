@@ -21,6 +21,7 @@
 		E4321150210222E200471EC5 /* GHDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E432114F210222E200471EC5 /* GHDeviceInfo.m */; };
 		E433B82D215E2142002CACF9 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E433B82C215E2142002CACF9 /* UIViewController+Extension.m */; };
 		E43D170C22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E43D170B22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.m */; };
+		E44F9DC422EE7AE800951A48 /* UINavigationController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E44F9DC322EE7AE800951A48 /* UINavigationController+Extension.m */; };
 		E456EC0C1F93BD0700414F27 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */; };
 		E45CC021210DCD6400CB6448 /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = E45CC020210DCD6400CB6448 /* NSString+PinYin.m */; };
 		E4612924217702840023DEA8 /* UIBezierPath+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4612923217702840023DEA8 /* UIBezierPath+Extension.m */; };
@@ -88,6 +89,8 @@
 		E433B82C215E2142002CACF9 /* UIViewController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
 		E43D170A22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Extension.h"; sourceTree = "<group>"; };
 		E43D170B22AF88FA00DD9FC6 /* NSDecimalNumber+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Extension.m"; sourceTree = "<group>"; };
+		E44F9DC222EE7AE800951A48 /* UINavigationController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Extension.h"; sourceTree = "<group>"; };
+		E44F9DC322EE7AE800951A48 /* UINavigationController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Extension.m"; sourceTree = "<group>"; };
 		E456EC0A1F93BD0700414F27 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
 		E456EC0B1F93BD0700414F27 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
 		E45CC01F210DCD6400CB6448 /* NSString+PinYin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin.h"; sourceTree = "<group>"; };
@@ -274,6 +277,15 @@
 			path = NSDecimalNumber;
 			sourceTree = "<group>";
 		};
+		E44F9DC122EE7AA700951A48 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				E44F9DC222EE7AE800951A48 /* UINavigationController+Extension.h */,
+				E44F9DC322EE7AE800951A48 /* UINavigationController+Extension.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
 		E456EC091F93BCC800414F27 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +383,7 @@
 				E4C4013B2248CF01001A141E /* UIButton */,
 				E4B655F520C6DBFC006B6F56 /* UIBarButtonItem */,
 				E433B827215E2108002CACF9 /* UIViewController */,
+				E44F9DC122EE7AA700951A48 /* UINavigationController */,
 				E46129212177025D0023DEA8 /* UIBezierPath */,
 				E49B004A1F87B5B70080035A /* Foundation+Log.m */,
 			);
@@ -632,6 +645,7 @@
 				E4612924217702840023DEA8 /* UIBezierPath+Extension.m in Sources */,
 				E49BFFF01F877BC20080035A /* AppDelegate.m in Sources */,
 				E478BDBA200E446000C2358E /* NSDate+Extension.m in Sources */,
+				E44F9DC422EE7AE800951A48 /* UINavigationController+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
