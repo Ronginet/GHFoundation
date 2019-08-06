@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@interface GHWifiInfo : NSObject
+
+@property (nonatomic, copy) NSString *SSID;  // wifi name.
+@property (nonatomic, copy) NSString *BSSID;
+
+@end
+
 @interface GHDeviceInfo : NSObject
 
 + (NSString *)UUID;
 
 + (NSString *)currentWifiName;
+
++ (GHWifiInfo *)currentWifi;
 
 @end

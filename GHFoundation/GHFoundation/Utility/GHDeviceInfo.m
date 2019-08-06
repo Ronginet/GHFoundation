@@ -9,6 +9,10 @@
 #import "GHDeviceInfo.h"
 #import <SystemConfiguration/CaptiveNetwork.h>
 
+@implementation GHWifiInfo
+
+@end
+
 @implementation GHDeviceInfo
 
 + (NSString *)UUID {
@@ -16,16 +20,23 @@
 }
 
 + (NSString *)currentWifiName {
-    NSString *wifiName = nil;
+    return [self currentWifi].SSID;
+}
+
++ (GHWifiInfo *)currentWifi {
+    GHWifiInfo *wifi = nil;
     CFArrayRef array = CNCopySupportedInterfaces();
     if (array) {
         CFDictionaryRef cfDict = CNCopyCurrentNetworkInfo(CFArrayGetValueAtIndex(array, 0));
         if (cfDict) {
+            wifi = [GHWifiInfo new];
             NSDictionary *dict = CFBridgingRelease(cfDict);
-            wifiName = [dict valueForKey:(__bridge NSString *)kCNNetworkInfoKeySSID];
+            wifi.SSID = [dict valueForKey:(__bridge NSString *)kCNNetworkInfoKeySSID];
+            wifi.BSSID = [dict valueForKey:(__bridge NSString *)kCNNetworkInfoKeyBSSID];
         }
+        CFRelease(array);
     }
-    return wifiName;
+    return wifi;
 }
 
 @end
