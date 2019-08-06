@@ -23,4 +23,6 @@
 
 + (GHWifiInfo *)currentWifi;
 
++ (NSString *)currentIPAddress;
+
 @end
