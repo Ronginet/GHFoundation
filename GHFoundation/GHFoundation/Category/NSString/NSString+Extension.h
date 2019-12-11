@@ -58,4 +58,7 @@
 /// 银行卡号显示格式化,显示后4位数字, 其他用*占位
 + (NSString *)gh_separatorBankCardNO:(NSString *)bankCardNO;
 
+/// 数字转汉字
++ (NSString *)gh_stringFromNumber:(NSNumber *)number;
+
 @end

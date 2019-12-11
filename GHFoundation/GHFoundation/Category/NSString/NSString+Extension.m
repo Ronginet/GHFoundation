@@ -202,4 +202,11 @@
     return returnText;
 }
 
++ (NSString *)gh_stringFromNumber:(NSNumber *)number {
+    NSNumberFormatter *format = [NSNumberFormatter new];
+    format.locale = [NSLocale localeWithLocaleIdentifier:@"zh_CN"];
+    format.numberStyle = NSNumberFormatterSpellOutStyle;
+    return [format stringFromNumber:number];
+}
+
 @end
