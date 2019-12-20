@@ -95,14 +95,13 @@ NSUInteger const gh_yearForSecond = 31556926;
 }
 
 - (NSDate *)previousDateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
-    NSDate *currentDate = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *comps = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:currentDate];
+    NSDateComponents *comps = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:self];
     [comps setYear:year];
     [comps setMonth:month];
     [comps setDay:day];
     
-    NSDate *date = [calendar dateByAddingComponents:comps toDate:currentDate options:0];
+    NSDate *date = [calendar dateByAddingComponents:comps toDate:self options:0];
     return date;
 }
 
