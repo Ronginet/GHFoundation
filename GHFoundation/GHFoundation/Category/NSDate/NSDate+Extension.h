@@ -39,11 +39,9 @@
 // Comparing dates
 - (BOOL) isEqualToDateIgnoringTime: (NSDate *) aDate;
 - (BOOL) isSameWeekAsDate: (NSDate *) aDate;
-- (BOOL) isThisWeek;
 - (BOOL) isNextWeek;
 - (BOOL) isLastWeek;
 - (BOOL) isSameMonthAsDate: (NSDate *) aDate;
-- (BOOL) isThisMonth;
 - (BOOL) isSameYearAsDate: (NSDate *) aDate;
 - (BOOL) isNextYear;
 - (BOOL) isLastYear;

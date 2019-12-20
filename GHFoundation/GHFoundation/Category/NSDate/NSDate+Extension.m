@@ -14,12 +14,6 @@ NSUInteger const gh_dayForSecond = 86400;
 NSUInteger const gh_weekForSecond = 604800;
 NSUInteger const gh_yearForSecond = 31556926;
 
-//#define D_MINUTE    60
-//#define D_HOUR        3600
-//#define D_DAY        86400
-//#define D_WEEK        604800
-//#define D_YEAR        31556926
-
 #define DATE_COMPONENTS (NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfMonth |  NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal)
 #define CURRENT_CALENDAR [NSCalendar currentCalendar]
 
