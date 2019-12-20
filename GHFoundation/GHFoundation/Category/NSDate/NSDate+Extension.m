@@ -26,50 +26,25 @@ NSUInteger const gh_yearForSecond = 31556926;
 @implementation NSDate (Extension)
 
 - (BOOL)isToday {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear;
-    
-    // 获取当前时间年月日
-    NSDateComponents *nowcmps = [calendar components:unit fromDate:[NSDate date]];
-    // 获取self的年月日
-    NSDateComponents *selfcmps = [calendar components:unit fromDate:self];
-    BOOL flag = (selfcmps.year == nowcmps.year) && (selfcmps.month == nowcmps.month) && (selfcmps.day == nowcmps.day);
-    return flag;
+    return [[NSCalendar currentCalendar] isDateInToday:self];
 }
 
 - (BOOL)isYesterday {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear;
-    // 获取当前时间年月日
-    NSDateComponents *nowcmps = [calendar components:unit fromDate:[NSDate date]];
-    // 获取self的年月日
-    NSDateComponents *selfcmps = [calendar components:unit fromDate:self];
-    BOOL flag = (selfcmps.year == nowcmps.year) && (selfcmps.month == nowcmps.month) && (selfcmps.day == nowcmps.day - 1);
-    return flag;
+    return [[NSCalendar currentCalendar] isDateInYesterday:self];
 }
 
 - (BOOL)isTomorrow {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear;
-    NSDateComponents *nowcmps = [calendar components:unit fromDate:[NSDate date]];
-    NSDateComponents *selfcmps = [calendar components:unit fromDate:self];
-    BOOL flag = (selfcmps.year == nowcmps.year) && (selfcmps.month == nowcmps.month) && (selfcmps.day == nowcmps.day + 1);
-    return flag;
+    return [[NSCalendar currentCalendar] isDateInTomorrow:self];
 }
 
 - (BOOL)isThisYear {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *nowCmps = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
-    NSDateComponents *selfCmps = [calendar components:NSCalendarUnitYear fromDate:self];
-    return nowCmps.year == selfCmps.year;
+    NSDateComponents *comp = [[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:self toDate:[NSDate date] options:NSCalendarWrapComponents];
+    return comp.year == 0;
 }
 
 - (BOOL)isThisMonth {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth;
-    NSDateComponents *nowCmps = [calendar components:unit fromDate:[NSDate date]];
-    NSDateComponents *selfCmps = [calendar components:unit fromDate:self];
-    return (nowCmps.year == selfCmps.year) && (nowCmps.month == selfCmps.month);
+    NSDateComponents *comp = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth fromDate:self toDate:[NSDate date] options:NSCalendarWrapComponents];
+    return comp.month == 0;
 }
 
 - (BOOL)isThisWeek {
