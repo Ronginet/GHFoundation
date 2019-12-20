@@ -10,7 +10,7 @@
 
 @implementation UIBarButtonItem (Extension)
 
-+ (UIBarButtonItem *)gh_barButtonWithTitle:(NSString *)title target:(id)target action:(SEL)action {
++ (UIBarButtonItem *)gh_barButtonItemWithTitle:(NSString *)title target:(id)target action:(SEL)action {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -21,12 +21,11 @@
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
-+ (UIBarButtonItem *)gh_barButtonWithImage:(NSString *)imgName target:(id)target action:(SEL)action {
-    UIImage *image = [UIImage imageNamed:imgName];
++ (UIBarButtonItem *)gh_barButtonItemWithImage:(UIImage *)image target:(id)target action:(SEL)action {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:image forState:UIControlStateNormal];
     [btn setImage:image forState:UIControlStateHighlighted];
-    btn.frame = CGRectMake(0, 0, 15, 15);
+    btn.frame = CGRectMake(0, 0, image.size.width, image.size.height);
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
