@@ -16,6 +16,11 @@
 - (BOOL)isThisYear;  // 是否为今年
 - (BOOL)isThisMonth;
 - (BOOL)isThisWeek;
+- (BOOL)isSameDayAsDate:(NSDate *)date;
+
+- (NSDate *)previousDay;  // 前一天
+- (NSDate *)previousMonth;  // 前一个月
+- (NSDate *)previousYear;  // 前一年
 
 - (NSDateComponents *)deltaWithNowDate;  // 与当前时间差距
 

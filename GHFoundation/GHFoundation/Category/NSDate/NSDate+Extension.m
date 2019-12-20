@@ -78,6 +78,34 @@ NSUInteger const gh_yearForSecond = 31556926;
     }
 }
 
+- (BOOL)isSameDayAsDate:(NSDate *)date {
+    return [[NSCalendar currentCalendar] isDate:self inSameDayAsDate:date];
+}
+
+- (NSDate *)previousDay {
+    return [self previousDateWithYear:0 month:0 day:-1];
+}
+
+- (NSDate *)previousMonth {
+    return [self previousDateWithYear:0 month:-1 day:0];
+}
+
+- (NSDate *)previousYear {
+    return [self previousDateWithYear:-1 month:0 day:0];
+}
+
+- (NSDate *)previousDateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
+    NSDate *currentDate = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:currentDate];
+    [comps setYear:year];
+    [comps setMonth:month];
+    [comps setDay:day];
+    
+    NSDate *date = [calendar dateByAddingComponents:comps toDate:currentDate options:0];
+    return date;
+}
+
 - (NSDateComponents *)deltaWithNowDate {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
