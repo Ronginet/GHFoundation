@@ -83,18 +83,30 @@ NSUInteger const gh_yearForSecond = 31556926;
 }
 
 - (NSDate *)previousDay {
-    return [self previousDateWithYear:0 month:0 day:-1];
+    return [self offsetWithYear:0 month:0 day:-1];
 }
 
 - (NSDate *)previousMonth {
-    return [self previousDateWithYear:0 month:-1 day:0];
+    return [self offsetWithYear:0 month:-1 day:0];
 }
 
 - (NSDate *)previousYear {
-    return [self previousDateWithYear:-1 month:0 day:0];
+    return [self offsetWithYear:-1 month:0 day:0];
 }
 
-- (NSDate *)previousDateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
+- (NSDate *)offsetDay:(NSInteger)day {
+    return [self offsetWithYear:0 month:0 day:day];
+}
+
+- (NSDate *)offsetMonth:(NSInteger)month {
+    return [self offsetWithYear:0 month:month day:0];
+}
+
+- (NSDate *)offsetYear:(NSInteger)year {
+    return [self offsetWithYear:year month:0 day:0];
+}
+
+- (NSDate *)offsetWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *comps = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:self];
     [comps setYear:year];
@@ -103,6 +115,40 @@ NSUInteger const gh_yearForSecond = 31556926;
     
     NSDate *date = [calendar dateByAddingComponents:comps toDate:self options:0];
     return date;
+}
+
+- (NSInteger)indexOfWeek {
+    NSDateComponents *comp = [[NSCalendar currentCalendar] components:NSCalendarUnitWeekday fromDate:self];
+    return comp.weekday;
+}
+
+- (NSArray<NSString *> *)weekOfMonth {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    calendar.firstWeekday = 2;
+    NSDateComponents *comp = [calendar components:NSCalendarUnitWeekOfMonth | NSCalendarUnitMonth fromDate:self];
+    return @[[NSString stringWithFormat:@"%ld", comp.month], [NSString stringWithFormat:@"%ld", comp.weekOfMonth]];
+}
+
+- (NSArray<NSString *> *)weekOfYear {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    calendar.firstWeekday = 2;
+    NSDateComponents *comp = [calendar components:NSCalendarUnitWeekOfYear | NSCalendarUnitYearForWeekOfYear fromDate:self];
+    return @[[NSString stringWithFormat:@"%ld", comp.yearForWeekOfYear], [NSString stringWithFormat:@"%ld", comp.weekOfYear]];
+}
+
+- (NSDate *)firstDayInMonth {
+    NSDate *firstDay = nil;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    [calendar rangeOfUnit:NSCalendarUnitMonth startDate:&firstDay interval:nil forDate:self];
+    return firstDay;
+}
+
+- (NSDate *)lastDayInMonth {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comp = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:self];
+    NSRange range = [calendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self];
+    comp.day = range.length;
+    return [calendar dateFromComponents:comp];
 }
 
 - (NSDateComponents *)deltaWithNowDate {

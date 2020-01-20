@@ -21,6 +21,16 @@
 - (NSDate *)previousDay;  // 前一天
 - (NSDate *)previousMonth;  // 前一个月
 - (NSDate *)previousYear;  // 前一年
+- (NSDate *)offsetDay:(NSInteger)day;
+- (NSDate *)offsetMonth:(NSInteger)month;
+- (NSDate *)offsetYear:(NSInteger)year;
+
+- (NSInteger)indexOfWeek;  // 1...7, 周日是1, 周一是2
+- (NSArray<NSString *> *)weekOfMonth;  // 某月第几周(周一为第1天)
+- (NSArray<NSString *> *)weekOfYear;  // 某年第几周(周一为第1天)
+
+- (NSDate *)firstDayInMonth;
+- (NSDate *)lastDayInMonth;
 
 - (NSDateComponents *)deltaWithNowDate;  // 与当前时间差距
 
